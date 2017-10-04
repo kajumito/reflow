@@ -1,0 +1,30 @@
+{
+  "name": "reflow",
+  "version": "0.0.1",
+  "description": "Visualization tool of the refugee flows around the world.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajumito/reflow.git"
+  },
+  "author": "Kasper Tontti, Mikko Kokkoniemi, Hentter Eloranta, Tapio Mylläri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kajumito/reflow/issues"
+  },
+  "homepage": "https://github.com/kajumito/reflow#readme",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
