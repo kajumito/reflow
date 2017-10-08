@@ -1,27 +1,22 @@
 const path = require('path');
 
-module.export = {
-  entry: './src/app.js',
-  output: {
-    filename = 'bundle.js',
-    path: path.reolve(__dirname, 'dist')
+module.exports = {
+  entry: './src/app/index.js',
+  output:{
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/app'
   },
-  watch: true,
   module: {
-    loaders: [{
-      test:/\.js$/,
-      exclude: /node_modules/,
-      loader: 'babel-loader',
-      quary:{
-        presets: ['react', 'es2015']
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+        query:{
+          presets: ['react', 'env']
+        }
       }
-    }]
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
+    ]
   }
 };
