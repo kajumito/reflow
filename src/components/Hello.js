@@ -5,6 +5,8 @@ export default class Hello extends React.Component{
     return(
       <div>
         <p>Hello World!</p>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-info">Info</button>
       </div>
     );
   }
