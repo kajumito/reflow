@@ -6,7 +6,7 @@ Tool that visualizes refugee flow of a country on a world map.
 
 ### Prerequisites
   
-  1. [Git] (https://git-scm.com/)
+  1. [Git](https://git-scm.com/)
   2. [Node](https://nodejs.org/) - for npm
   3. Clone this repository `git clone https://github.com/kajumito/reflow.git`.
   
