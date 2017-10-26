@@ -14,8 +14,12 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query:{
-          presets: ['react', 'env']
+          presets: ['env']
         }
+      },
+      {
+        test:/\.scss$/,
+        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
   }
