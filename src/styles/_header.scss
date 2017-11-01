@@ -1,0 +1,19 @@
+header {
+	background-color: #fff;
+	height: 100px;
+	display: flex;
+
+	.title {
+		color: $font-main-color;
+		align-self: center;
+		margin-left: 25px;
+	}
+
+	.menu-link {
+		color: #95989A;
+		text-decoration: none;
+		align-self: center;
+		margin-left: auto;
+		margin-right: 25px;
+	}
+}
