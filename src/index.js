@@ -4,7 +4,7 @@ import { queue } from 'd3-queue';
 import * as topojson from 'topojson-client';
 import * as R from 'ramda';
 
-import jsonWorldMap from './json/world.json';
+import jsonWorldMap from './maps/world.json';
 import jsonFinland from './data/finland_1row.json';
 import {
   projection,
@@ -15,9 +15,6 @@ import { moveItemAlongPath } from './util/animation';
 import { drawArcs } from './util/map';
 
 // Note that select is a dom-method!
-//
-
-console.log(jsonWorldMap);
 
 let geoData;
 let group = svg.append('g');
