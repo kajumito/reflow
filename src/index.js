@@ -10,9 +10,9 @@ var svg = d3.select('#map').append('svg')
 						.attr('width', width)
 						.attr('height', height);
 
-d3.json("src/maps/worldmap.json", function(error, world) {
+d3.json("src/maps/world.json", function(error, world) {
 	console.log(world);
   svg.append('path')
-      .datum(topojson.feature(world, world.objects.countries))
-      .attr('d', d3.geo.path().projection(d3.geo.mercator()));
+      .datum(topojson.feature(world, world.objects.ne_110m_admin_0_countries))
+      .attr('d', d3.geo.path().projection(d3.geo.equirectangular()));
 });
