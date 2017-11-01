@@ -1,11 +1,13 @@
 const path = require('path');
+const compressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
+  cache: false,
   output:{
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/app'
+    publicPath: '/dist'
   },
   module: {
     loaders: [
@@ -16,11 +18,16 @@ module.exports = {
         query:{
           presets: ['env']
         }
-      },
-      {
-        test:/\.scss$/,
-        loader: 'style-loader!css-loader!sass-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new compressionPlugin({
+      asset: '[path].gz[query]',
+      algorithm: 'gzip',
+      test: /\.js$|\.css$\.html$/,
+      treshold: 10240,
+      minRatio: 0.8
+    })
+  ]
 };

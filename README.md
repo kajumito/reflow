@@ -1,33 +1,38 @@
-# Visualization tool of the refugee flows around the world.
+# D3 geo exercise
 
-Tool that visualizes refugee flow of a country on a world map.
+## Start up
 
-## Getting started
+- Pull repository
 
-### Prerequisites
-  
-  1. [Git](https://git-scm.com/)
-  2. [Node](https://nodejs.org/) - for npm
-  3. Clone this repository `git clone https://github.com/kajumito/reflow.git`.
-  
-### Installation
+```
+git clone https://github.com/mikkokokkoniemi/d3-geo-exercise
+```
 
-  1. Go to project directory `cd reflow`.
-  2. Run `npm install` to install all dependencies.
+- Install dependencies
 
-## Usage
+```
+npm install
+```
 
-  1. Run `npm start` to start site locally with webpack.
-  2. Go to `localhost:8080` on your browser to open the site.
-  3. Changes to components in `src` folder will livereload on save.
+- Start webpack-dev-server
 
-## Authors
+```
+npm start
+```
 
-* **Kasper Tontti**
-* **Mikko Kokkoniemi**
-* **Henter Eloranta**
-* **Tapio Mylläri**
+- Or build project for production
 
-## License
+```
+npm run build
+```
 
-This project is under the MIT license.
+## Used resources
+
+- [Natural Earth map data](http://www.naturalearthdata.com/downloads/110m-cultural-vectors/)
+- [UNCHR Population statistics](http://popstats.unhcr.org/en/overview)
+
+## Used libraries
+
+- [Ramda](http://ramdajs.com/), a neat functional library for js
+- [D3](https://d3js.org/), especially d3-geo
+- [TopoJSON](https://github.com/topojson/topojson)
