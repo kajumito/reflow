@@ -2,6 +2,8 @@
 
 Tool that visualizes refugee flow of a country on a world map.
 
+![reflow-ui](https://github.com/kajumito/reflow/blob/master/UI/reflow-ui.png)
+
 ## Getting started
 
 ### Prerequisites
