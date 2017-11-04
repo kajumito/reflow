@@ -1,3 +1,7 @@
+html {
+    height: 100%;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,29 +9,34 @@
 	body {
         background-color: $background-color;
     	font-family: 'Roboto', sans-serif;
+        height: 100%;
 
         h1 {
-            font-weight: 800;
+            font-size: 42px;
         }
 
         h2 {
+            font-size: 30px;
+        }
+
+        h3 {
             font-weight: 400;
         }
 
         .flex-container {
             display: flex;
+            height: calc(100% - 100px);
 
             .info-container {
-                width: 15.625%;
+                width: 15%;
                 background-color: $tab-color;
+                box-shadow: 2px 5px 5px rgba(0,0,0,0.2);
             }
 
             .map-container {
-                width: 75%;
+                width: 85%;
             }
         }
-
-
 	}
 }
 

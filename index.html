@@ -22,9 +22,41 @@
   </header>
 
   <div class="flex-container">
-    <aside class="info-container"></aside>
+    <aside class="info-container">
+      <div id="country-info">
+        <h2 class="side-title">Finland</h2>
+        <ul id="info-section">
+          <li id="population">Population: 5,4mil.</li>
+          <li id="gdp">GDP: 235,8mil.</li>
+          <li id="gdp-capita">GDP (capita): 43,1k</li>
+          <li id="life-expentancy">Life expentancy: 81.4</li>
+        </ul>
+      </div>
+      <div id="events-info">
+        <h2 class="side-title">Events</h2>
+        <ul id="event-section">
+          <li id="event-desc">What happened in the world at this time</li>
+          <li id="event-box">
+            <h4 class="event-heading">Black Dragon Fire</h4>
+            <p class="event-excerpt">The Black Dragon Fire was a massive wildfire that occurred in China and the Soviet Union during May 1987.</p>
+            <span><a href="#" class="event-link">Learn more</a></span>
+          </li>
+          <li id="event-box">
+            <h4 class="event-heading">Black Dragon Fire</h4>
+            <p class="event-excerpt">The Black Dragon Fire was a massive wildfire that occurred in China and the Soviet Union during May 1987.</p>
+            <span><a href="#" class="event-link">Learn more</a></span>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
     <main class="map-container">
         <div id="map"></div>
+        <div id="slider">
+          <h3>Current year</h3>
+          <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" oninput="outputYear.value = inputYear.value">
+          <output name="outputYear" id="outputYear">1983</output>
+        </div>
     </main>
   </div>
 

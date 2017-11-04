@@ -1,0 +1,54 @@
+aside.info-container {
+	padding: 20px;
+
+	h2.side-title {
+		border-bottom: 4px solid $primary-color;
+
+	}
+
+	li {
+		padding: 10px 0;
+		color: $font-secondary-color;
+	}
+
+	#country-info {
+		height: 40%;
+
+		ul {
+			list-style-type: none;
+			margin-top: 20px;
+			font-size: 20px;
+		}
+	}
+
+	#events-info {
+		height: 60%;
+
+		ul {
+			list-style-type: none;
+		}
+
+		li#event-box {
+			margin-bottom: 20px;
+			border: 1px solid $font-light-color;
+			padding: 10px;
+			color: $font-main-color;
+			overflow: auto;
+
+			h4.event-heading {
+				margin-bottom: 10px;
+			}
+
+			p.event-excerpt {
+				font-size: 14px;
+			}
+
+			a.event-link {
+				float:right;
+				font-size: 12px;
+				text-decoration: none;
+				color: $font-secondary-color;
+			}
+		}
+	}
+}
