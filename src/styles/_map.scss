@@ -14,11 +14,11 @@
         :hover {
             fill: $primary-color;
         }
+    }
 
-        .centroid {
-            fill: $arcs-color;
-            stroke: #577B8C;
-        }
+    .centroid {
+        fill: $arcs-color;
+        stroke: #577B8C;
     }
 
     .arc {

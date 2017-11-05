@@ -1,14 +1,17 @@
+<%
+var pkg = require('../package.json');
+%>
 <!doctype html>
 
 <html lang="en">
 <head>
   <meta charset="utf-8">
 
-  <title>App</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <title><%= pkg.name %></title>
+  <meta name="description" content="<%= pkg.description %>">
+  <meta name="author" content="<%= pkg.author %>">
 
-  <link rel="stylesheet" href="dist/styles/index.css?v=1.0">
+  <link rel="stylesheet" href="styles/index.css?v=<%= pkg.version %>">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -54,12 +57,12 @@
         <div id="map"></div>
         <div id="slider">
           <h3>Current year</h3>
-          <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" oninput="outputYear.value = inputYear.value">
+          <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016">
           <output name="outputYear" id="outputYear">1983</output>
         </div>
     </main>
   </div>
 
-  <script src="dist/bundle.js"></script>
+  <script src="bundle.js?v=<%= pkg.version %>"></script>
 </body>
 </html>

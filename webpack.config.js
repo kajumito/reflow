@@ -1,8 +1,10 @@
 const path = require('path');
-const compressionPlugin = require('compression-webpack-plugin');
+const copyPlugin = require('copy-webpack-plugin');
+const htmlPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   cache: false,
   output:{
     filename: 'bundle.js',
@@ -22,12 +24,21 @@ module.exports = {
     ]
   },
   plugins: [
-    new compressionPlugin({
-      asset: '[path].gz[query]',
-      algorithm: 'gzip',
-      test: /\.js$|\.css$\.html$/,
-      treshold: 10240,
-      minRatio: 0.8
+    new copyPlugin([
+      {from: 'src/data', to: 'data'}
+    ]),
+    new htmlPlugin({
+      template: './src/index.ejs',
+      fileName: 'index.html',
+      inject: false
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    publicPath: '/',
+    compress: true,
+    port: 8080,
+    historyApiFallback: true,
+    inline: true
+  }
 };

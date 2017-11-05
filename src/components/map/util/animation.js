@@ -1,4 +1,3 @@
-import { svg, path } from '../map-settings';
 import { transition } from 'd3-transition';
 import { drawArcs } from './map';
 
@@ -25,7 +24,7 @@ export const itemTransition = (item, route) => {
 /**
  * coordinates: [[x1, y1], [x2, y2]]
  */
-export const moveItemAlongPath = (coordinates) => {
+export const moveItemAlongPath = (coordinates, svg) => {
   const route = svg.append('path')
     .datum(coordinates)
     .attr('class', 'route')
