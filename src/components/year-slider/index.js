@@ -3,6 +3,7 @@ import * as R from 'ramda';
 
 import listeners from './listeners';
 
+// dom-elements
 export const sliderEl = document.querySelector('#inputYear');
 export const outputYearEl = document.querySelector('#outputYear');
 
@@ -22,6 +23,6 @@ const sliderInit = async () => {
 }
 
 export default () => {
-    listeners();
     sliderInit();
+    listeners();
 }
