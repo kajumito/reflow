@@ -17,13 +17,13 @@ import { drawArcs } from './util/map';
 
 // Note that select is a dom-method!
 
-let geoData;
+export let geoData;
 let groupCountries = svg.append('g');
 let groupCentroids = svg.append('g');
 let allCoordinates = [];
 
 
-const drawMap = (countries, traffic) => {
+export const drawMap = (countries, traffic) => {
     // load map data to array
     geoData = topojson.feature(countries, countries.objects.ne_110m_admin_0_countries).features;
     // append centroids for each country

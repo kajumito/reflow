@@ -1,8 +1,7 @@
-import { svg, projection } from '../map-settings';
-import { select } from 'd3-selection';
-import jsonWorldMap from '../maps/world.json';
-import jsonFinland from '../../../data/finland_1row.json';
-import { drawMap } from '../index';
+import { svg, projection, path } from '../map-settings';
+import { select, selectAll } from 'd3-selection';
+import { geoCentroid } from 'd3-geo';
+import { geoData } from '../index';
 
 export default () => {
     /**
@@ -28,11 +27,18 @@ export default () => {
      */
     select(window).on('resize', (e) => {
         const node = svg.node();
-        node.setAttribute('width', node.parentElement.offsetWidth);
-        node.setAttribute('height', node.parentElement.offsetHeight);
-        projection
-            .scale([node.parentElement.offsetWidth/3.5])
-            .translate([node.parentElement.offsetWidth/2.25,node.parentElement.offsetHeight*1.75]);
-        drawMap(jsonWorldMap, jsonFinland);
+        const newWidth = Math.min(node.parentElement.offsetWidth, window.map.maxWidth);
+        const newHeight = Math.min(node.parentElement.offsetHeight, window.map.maxHeight);
+
+        node.setAttribute('width', newWidth);
+        node.setAttribute('height', newHeight);
+        // change projection to match new width and height
+        projection.scale([newWidth/5.333]).translate([newWidth/2.25, newHeight / 1.75]);
+        // change all paths
+        selectAll('path').attr('d', path);
+        // remap centroids
+        geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
+        // this is only needed if we want to show centroid on map
+        selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1])
     });
 }
