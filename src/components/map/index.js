@@ -52,7 +52,7 @@ const drawMap = (countries, traffic) => {
        .attr('r', '2')
        .exit();
 
-    // draw arcs for yearly traffic data
+    // Save current year's traffic coordinates to a global variable
     processCoordinates(traffic);
 
 //todo: animation intensity should depend on traffic amount.

@@ -2,7 +2,10 @@ import * as R from 'ramda';
 import { selectAll } from 'd3-selection';
 import { svg } from '../map-settings'
 
-
+/**
+ * @param  {Array} c Coordinate
+ * @return {String}  Svg arc string
+ */
 export const drawArcs = c => {
   const bend = 1.3;
   const d = {source: c[0], target: c[1]};
@@ -13,6 +16,9 @@ export const drawArcs = c => {
   return `M${d.source[0]},${d.source[1]}A${dr} ${dr} 0 0,${sweep} ${d.target[0]},${d.target[1]}`;
 }
 
+/**
+ * Saves current year's traffic coordinates to a global variable
+ */
 export const processCoordinates = (traffic) => {
     if (window.map.allCoordinates.length) {
         window.map.allCoordinates = [];
@@ -30,6 +36,7 @@ export const processCoordinates = (traffic) => {
         ];
         window.map.allCoordinates.push(coordinates);
 
+        // this is unnessessary... here just for demo purpose
         let line = svg.append('path')
           .datum(coordinates)
           .attr('d', drawArcs)

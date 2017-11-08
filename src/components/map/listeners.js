@@ -31,7 +31,7 @@ export default () => {
 
 
     /**
-     * Select is a d3-method
+     * Some responsivity for map
      */
     window.addEventListener('resize', (e) => {
         const node = svg.node();

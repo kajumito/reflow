@@ -8,6 +8,9 @@ import { yearChanged } from './events';
 
 
 export default () => {
+    /**
+     * Change the year when slider changes
+     */
     sliderEl.addEventListener('input', (e) => {
         outputYearEl.value = sliderEl.value;
         window.year = sliderEl.value;
