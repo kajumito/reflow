@@ -1,7 +1,12 @@
-import { svg, projection, path } from '../map-settings';
+/**
+ * Component-related event-listeners are grouped in this file.
+ * This improves project maintainability.
+ */
+
+import { svg, projection, path } from './map-settings';
 import { select, selectAll } from 'd3-selection';
 import { geoCentroid } from 'd3-geo';
-import { geoData } from '../index';
+import { geoData } from './index';
 
 export default () => {
     /**
@@ -25,7 +30,7 @@ export default () => {
     /**
      * Select is a d3-method
      */
-    select(window).on('resize', (e) => {
+    window.addEventListener('resize', (e) => {
         const node = svg.node();
         const newWidth = Math.min(node.parentElement.offsetWidth, window.map.maxWidth);
         const newHeight = Math.min(node.parentElement.offsetHeight, window.map.maxHeight);
@@ -36,9 +41,9 @@ export default () => {
         projection.scale([newWidth/5.333]).translate([newWidth/2.25, newHeight / 1.75]);
         // change all paths
         selectAll('path').attr('d', path);
-        // remap centroids
+        // remap centroids with new projection
         geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
-        // this is only needed if we want to show centroid on map
+        // this is only needed if we want to show centroids on map
         selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1])
     });
 }
