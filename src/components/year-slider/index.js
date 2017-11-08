@@ -17,6 +17,7 @@ const sliderInit = async () => {
     if (dataResponse.status === 200) {
         const {data} = dataResponse;
         const years = R.flatten(R.map((obj) => R.keys(obj)[0], data));
+        window.year = sliderEl.value = outputYearEl.value = years[0];
         sliderEl.setAttribute('min', years[0]);
         sliderEl.setAttribute('max', years[years.length - 1]);
     }

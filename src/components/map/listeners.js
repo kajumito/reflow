@@ -6,7 +6,9 @@
 import { svg, projection, path } from './map-settings';
 import { select, selectAll } from 'd3-selection';
 import { geoCentroid } from 'd3-geo';
-import { geoData } from './index';
+import { processCoordinates } from './util/map';
+import { allCoordinates } from '../index';
+import jsonFinland from '../../data/finland.json';
 
 export default () => {
     /**
@@ -14,6 +16,7 @@ export default () => {
      */
     window.addEventListener('yearChanged', (e) => {
         console.log('yearChanged event triggered!');
+        processCoordinates(jsonFinland);
     }, false);
 
     //const elements = document.querySelectorAll('.countries > path');
@@ -21,7 +24,7 @@ export default () => {
     //window.dispatchEvent(countryChanged);
 
     //const countriesEl = document.querySelector('.countries');
-//
+    //
     //countrieEl.addEventListener('click', (e) => {
     //    e.target
     //})
@@ -42,7 +45,7 @@ export default () => {
         // change all paths
         selectAll('path').attr('d', path);
         // remap centroids with new projection
-        geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
+        window.map.geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
         // this is only needed if we want to show centroids on map
         selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1])
     });

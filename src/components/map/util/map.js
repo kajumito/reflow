@@ -1,3 +1,8 @@
+import * as R from 'ramda';
+import { selectAll } from 'd3-selection';
+import { svg } from '../map-settings'
+
+
 export const drawArcs = c => {
   const bend = 1.3;
   const d = {source: c[0], target: c[1]};
@@ -6,4 +11,31 @@ export const drawArcs = c => {
   const dr = Math.sqrt(dx * dx + dy * dy)*bend;
   const sweep = d.target[0] - d.source[0] < 0 ? 0 : 1;
   return `M${d.source[0]},${d.source[1]}A${dr} ${dr} 0 0,${sweep} ${d.target[0]},${d.target[1]}`;
+}
+
+export const processCoordinates = (traffic) => {
+    if (window.map.allCoordinates.length) {
+        window.map.allCoordinates = [];
+        selectAll('.arc').remove();
+    }
+
+  traffic.map(years => {
+    if (years[window.year]) {
+      years[window.year].map(({country}) => {
+        const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
+        const toCountry = R.find(R.pathEq(['properties', 'NAME'], 'Finland'))(window.map.geoData);
+        const coordinates = [
+          fromCountry.centroid,
+          toCountry.centroid
+        ];
+        window.map.allCoordinates.push(coordinates);
+
+        let line = svg.append('path')
+          .datum(coordinates)
+          .attr('d', drawArcs)
+          .attr('class', 'arc')
+          .exit();
+      });
+    }
+  });
 }

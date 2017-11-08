@@ -6,35 +6,34 @@ import * as R from 'ramda';
 
 import listeners from './listeners';
 import jsonWorldMap from './maps/world.json';
-import jsonFinland from '../../data/finland_1row.json';
+import jsonFinland from '../../data/finland.json';
 import {
   projection,
   path,
   svg
 } from './map-settings';
 import { moveItemAlongPath } from './util/animation';
-import { drawArcs } from './util/map';
+import { drawArcs, processCoordinates } from './util/map';
 
 // Note that select is a dom-method!
 
-export let geoData;
 let groupCountries = svg.append('g');
 let groupCentroids = svg.append('g');
-let allCoordinates = [];
+export let allCoordinates = [];
 
 
-export const drawMap = (countries, traffic) => {
+const drawMap = (countries, traffic) => {
     // load map data to array
-    geoData = topojson.feature(countries, countries.objects.ne_110m_admin_0_countries).features;
+    window.map.geoData = topojson.feature(countries, countries.objects.ne_110m_admin_0_countries).features;
     // append centroids for each country
-    geoData.map(d => {
+    window.map.geoData.map(d => {
         d.centroid = projection(geoCentroid(d));
     });
 
     // draw countries
     groupCountries.attr('class', 'countries')
         .selectAll('path.country')
-        .data(geoData)
+        .data(window.map.geoData)
         .enter()
         .append('path')
         .attr('id', (d) => d.properties.NAME)
@@ -44,7 +43,7 @@ export const drawMap = (countries, traffic) => {
     // draw centroids of countries
     groupCentroids.attr('class', 'centroids')
        .selectAll('path.centroid')
-       .data(geoData)
+       .data(window.map.geoData)
        .enter()
        .append('circle')
        .classed('centroid', true)
@@ -54,31 +53,13 @@ export const drawMap = (countries, traffic) => {
        .exit();
 
     // draw arcs for yearly traffic data
-    traffic.map(years => {
-      R.keys(years).map(i => {
-        years[i].map(({country}) => {
-          const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(geoData);
-          const toCountry = R.find(R.pathEq(['properties', 'NAME'], 'Finland'))(geoData);
-          const coordinates = [
-            fromCountry.centroid,
-            toCountry.centroid
-          ];
-          allCoordinates.push(coordinates);
-
-          //let line = svg.append('path')
-          //  .datum(coordinates)
-          //  .attr('d', drawArcs)
-          //  .attr('class', 'arc')
-          //  .exit();
-        });
-      });
-    });
+    processCoordinates(traffic);
 
 //todo: animation intensity should depend on traffic amount.
 //let i = 0;
 //setInterval(_ => {
-//  if (i > allCoordinates.length - 1) i = 0;
-//  moveItemAlongPath(allCoordinates[i], svg);
+//  if (i > window.map.allCoordinates.length - 1) i = 0;
+//  moveItemAlongPath(window.map.allCoordinates[i], svg);
 //  i++;
 //  }, 10);
 }
