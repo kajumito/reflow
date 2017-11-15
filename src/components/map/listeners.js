@@ -3,7 +3,12 @@
  * This improves project maintainability.
  */
 
-import { svg, projection, path } from './map-settings';
+import {
+    svg,
+    projection,
+    path,
+    config as mapConfig
+} from './map-settings';
 import { select, selectAll } from 'd3-selection';
 import { geoCentroid } from 'd3-geo';
 import { processCoordinates } from './util/map';
@@ -19,12 +24,8 @@ export default () => {
         processCoordinates(jsonFinland);
     }, false);
 
-    //const elements = document.querySelectorAll('.countries > path');
-    //console.log(elements);
-    //window.dispatchEvent(countryChanged);
-
     const countriesEl = document.querySelector('.countries');
-    
+
     //Selects a country from the map.
     countriesEl.addEventListener('click', (e) => {
         console.log('click event triggered!');
@@ -38,18 +39,19 @@ export default () => {
      */
     window.addEventListener('resize', (e) => {
         const node = svg.node();
-        const newWidth = Math.min(node.parentElement.offsetWidth, window.map.maxWidth);
-        const newHeight = Math.min(node.parentElement.offsetHeight, window.map.maxHeight);
+        const newWidth = Math.min(node.parentElement.offsetWidth, mapConfig.width);
+        const newHeight = Math.min(node.parentElement.offsetHeight, mapConfig.height);
 
         node.setAttribute('width', newWidth);
         node.setAttribute('height', newHeight);
         // change projection to match new width and height
-        projection.scale([newWidth/5.333]).translate([newWidth/2.25, newHeight / 1.75]);
+        projection.scale([newWidth/mapConfig.scalars.scale])
+            .translate([newWidth/mapConfig.scalars.width, newHeight / mapConfig.scalars.height]);
         // change all paths
         selectAll('path').attr('d', path);
         // remap centroids with new projection
         window.map.geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
         // this is only needed if we want to show centroids on map
-        selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1])
+        selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1]);
     });
 }
