@@ -3,6 +3,8 @@ import { geoCentroid } from 'd3-geo';
 import { queue } from 'd3-queue';
 import * as topojson from 'topojson-client';
 import * as R from 'ramda';
+import testidataa from '../../data/gdpTest.json';
+import gdpData from '../../data/GDPData.json';
 
 import listeners from './listeners';
 import jsonWorldMap from './maps/world.json';
@@ -37,6 +39,7 @@ const drawMap = (countries, traffic) => {
         .enter()
         .append('path')
         .attr('id', (d) => d.properties.NAME)
+        .attr('country-code', (d) => d.properties.ADM0_A3)
         .attr('d', path)
         .exit();
 
@@ -56,17 +59,31 @@ const drawMap = (countries, traffic) => {
     processCoordinates(traffic);
 
 //todo: animation intensity should depend on traffic amount.
-//let i = 0;
-//setInterval(_ => {
-//  if (i > window.map.allCoordinates.length - 1) i = 0;
-//  moveItemAlongPath(window.map.allCoordinates[i], svg);
-//  i++;
-//  }, 10);
+let i = 0;
+setInterval(_ => {
+  if (i > window.map.allCoordinates.length - 1) i = 0;
+  moveItemAlongPath(window.map.allCoordinates[i], svg);
+  i++;
+  }, 100);
 }
 
 export default () => {
   drawMap(jsonWorldMap, jsonFinland);
   listeners();
+
+
+  //const year = window.year;
+  //const yearData = R.find(R.propEq('countryName', window.country), testidataa)['1994'];
+  //console.log(yearData);
+
+
+  //let gdptest = Object.keys(gdpData).map((key) => {
+  //  const countryCodeObj = {'Country Name': key};
+  //  const row = {...countryCodeObj, ...gdpData[key]};
+  //  return row;
+  //});
+  //console.log(JSON.stringify(gdptest));
+
 }
 
 

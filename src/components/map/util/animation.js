@@ -10,9 +10,9 @@ const translateItem = path => {
 
   return i => t => {
     const point = path.getPointAtLength(t * length);
-    const scale = Math.min(Math.sin(Math.PI * t) * 0.7, 0.3);
-
-    return `translate(${point.x},${point.y}) scale(${scale})`;
+    //const scale = Math.min(Math.sin(Math.PI * t) * 0.7, 0.3);
+    //return `translate(${point.x},${point.y}) scale(${scale})`;
+    return `translate(${point.x},${point.y})`;
   }
 }
 
@@ -43,7 +43,7 @@ export const moveItemAlongPath = (coordinates, svg) => {
 
   const item = svg.append('circle')
     .attr('class', 'moving-item')
-    .attr('r', 20);
+    .attr('r', 3);
 
     itemTransition(item, route);
 }
