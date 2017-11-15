@@ -23,11 +23,14 @@ export default () => {
     //console.log(elements);
     //window.dispatchEvent(countryChanged);
 
-    //const countriesEl = document.querySelector('.countries');
-    //
-    //countrieEl.addEventListener('click', (e) => {
-    //    e.target
-    //})
+    const countriesEl = document.querySelector('.countries');
+    
+    //Selects a country from the map.
+    countriesEl.addEventListener('click', (e) => {
+        console.log('click event triggered!');
+        console.log(e.target.id);
+        window.country = e.target.id;
+    })
 
 
     /**
