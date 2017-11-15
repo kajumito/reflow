@@ -8,7 +8,8 @@
     "start-dev-server": "webpack-dev-server --output-path /dist --config webpack.config.js --progress",
     "build-sass": "node-sass-chokidar --include-path ./src/styles/ src/styles/index.scss -o dist/styles --output-style compressed",
     "watch-sass": "npm run build-sass && npm run build-sass -- -w",
-    "build": "webpack --optimize-minimize"
+    "build": "webpack --optimize-minimize",
+    "refactor-jsons": "node ./scripts/refactorJsons.js"
   },
   "repository": {
     "type": "git",
