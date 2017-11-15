@@ -7,6 +7,7 @@ function init() {
     // Boot our components
     components.MapComponent();
     components.SliderComponent();
+    components.EventBox();
 }
 
 document.addEventListener('DOMContentLoaded', init, false);
