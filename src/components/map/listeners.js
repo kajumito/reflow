@@ -30,6 +30,10 @@ export default () => {
     countriesEl.addEventListener('click', (e) => {
         console.log('click event triggered!');
         console.log(e.target.id);
+        countriesEl.childNodes.forEach((el) => {
+            el.classList.remove('target-country');
+        })
+        e.target.classList.add('target-country');
         window.country = e.target.id;
     })
 
