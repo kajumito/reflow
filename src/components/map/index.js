@@ -3,7 +3,6 @@ import { geoCentroid } from 'd3-geo';
 import { queue } from 'd3-queue';
 import * as topojson from 'topojson-client';
 import * as R from 'ramda';
-import testidataa from '../../data/gdpTest.json';
 import gdpData from '../../data/GDPData.json';
 
 import listeners from './listeners';
@@ -64,7 +63,7 @@ setInterval(_ => {
   if (i > window.map.allCoordinates.length - 1) i = 0;
   moveItemAlongPath(window.map.allCoordinates[i], svg);
   i++;
-  }, 100);
+  }, 300);
 }
 
 export default () => {
