@@ -1,25 +1,1698 @@
-[{"1971":[{"country":"Peru","count":3144},{"country":"China","count":2347},{"country":"Guatemala","count":4884},{"country":"Portugal","count":600},{"country":"China","count":889},{"country":"Tanzania","count":2150},{"country":"Lithuania","count":2921},{"country":"China","count":236},{"country":"Morocco","count":3217},{"country":"China","count":2411},{"country":"Sweden","count":1958}]},
-{"1972":[{"country":"Japan","count":4680},{"country":"Indonesia","count":2209},{"country":"Indonesia","count":2254},{"country":"China","count":1154},{"country":"Argentina","count":4909},{"country":"Ukraine","count":1870},{"country":"Poland","count":1197},{"country":"Philippines","count":762},{"country":"Chad","count":3612},{"country":"Indonesia","count":2762},{"country":"Greece","count":181},{"country":"Serbia","count":1933},{"country":"United States","count":3495},{"country":"Peru","count":826}]},
-{"1973":[{"country":"Mexico","count":3539},{"country":"China","count":3968},{"country":"Mexico","count":3452},{"country":"Indonesia","count":4949},{"country":"Cuba","count":1218},{"country":"Portugal","count":4189},{"country":"Indonesia","count":4666},{"country":"Russia","count":4184},{"country":"China","count":3981},{"country":"Sierra Leone","count":2003},{"country":"Greece","count":4555},{"country":"Philippines","count":2211},{"country":"Russia","count":797},{"country":"Panama","count":514},{"country":"Indonesia","count":651}]},
-{"1974":[{"country":"Serbia","count":2180},{"country":"Laos","count":1064},{"country":"Sweden","count":561},{"country":"Indonesia","count":1329},{"country":"Venezuela","count":1931},{"country":"China","count":2434},{"country":"Indonesia","count":3082},{"country":"China","count":4255},{"country":"Macedonia","count":1306},{"country":"Russia","count":2568},{"country":"Philippines","count":3897},{"country":"Poland","count":2574},{"country":"Russia","count":210},{"country":"Belarus","count":3571},{"country":"Mongolia","count":4317},{"country":"Russia","count":4760},{"country":"China","count":4566},{"country":"Brazil","count":22}]},
-{"1975":[{"country":"Malawi","count":2358},{"country":"Canada","count":4096},{"country":"Indonesia","count":3707},{"country":"China","count":2903},{"country":"Malaysia","count":3779},{"country":"Bulgaria","count":3000},{"country":"Senegal","count":1731},{"country":"Mexico","count":2200},{"country":"Philippines","count":4136},{"country":"Argentina","count":3409},{"country":"Czech Republic","count":452},{"country":"China","count":1049}]},
-{"1976":[{"country":"Canada","count":4841},{"country":"China","count":3367},{"country":"Iran","count":2254},{"country":"China","count":4427},{"country":"Cyprus","count":4166},{"country":"Croatia","count":1272},{"country":"China","count":1040},{"country":"Czech Republic","count":2599},{"country":"Russia","count":4568},{"country":"Ukraine","count":598},{"country":"China","count":4448}]},
-{"1977":[{"country":"Brazil","count":4766},{"country":"El Salvador","count":3621},{"country":"Argentina","count":1855},{"country":"Sudan","count":2796},{"country":"Indonesia","count":1753},{"country":"Poland","count":1195},{"country":"China","count":4838},{"country":"China","count":1821},{"country":"Russia","count":4316},{"country":"Czech Republic","count":3101},{"country":"China","count":2907},{"country":"China","count":599},{"country":"China","count":2446},{"country":"United States","count":4117},{"country":"Indonesia","count":3483},{"country":"Thailand","count":1803},{"country":"China","count":110}]},
-{"1978":[{"country":"Guatemala","count":842},{"country":"Egypt","count":1266},{"country":"Brazil","count":1100},{"country":"Portugal","count":2353},{"country":"Russia","count":219},{"country":"Ukraine","count":1216},{"country":"China","count":4539},{"country":"Japan","count":4849},{"country":"Brazil","count":2041},{"country":"Mauritius","count":4073},{"country":"China","count":170},{"country":"Jamaica","count":2862}]},
-{"1979":[{"country":"Portugal","count":866},{"country":"China","count":3928},{"country":"Poland","count":3969},{"country":"Bolivia","count":3732},{"country":"Thailand","count":4503},{"country":"Brazil","count":640},{"country":"Portugal","count":2756},{"country":"Vietnam","count":2542},{"country":"Russia","count":830},{"country":"China","count":1882},{"country":"United States","count":3965},{"country":"China","count":3873},{"country":"Ireland","count":2046},{"country":"China","count":1797},{"country":"Malta","count":3554},{"country":"Ukraine","count":4660},{"country":"Ukraine","count":4727},{"country":"Bolivia","count":1089},{"country":"China","count":167},{"country":"Canada","count":4036},{"country":"Myanmar","count":1613},{"country":"Netherlands","count":4957},{"country":"Comoros","count":4384}]},
-{"1980":[{"country":"France","count":4662},{"country":"Philippines","count":2549},{"country":"Peru","count":2139},{"country":"Argentina","count":345},{"country":"Brazil","count":1069},{"country":"Indonesia","count":4054},{"country":"Indonesia","count":125},{"country":"Indonesia","count":4203},{"country":"Indonesia","count":289},{"country":"Philippines","count":3837},{"country":"Nicaragua","count":1515},{"country":"Colombia","count":2876},{"country":"United States","count":4121},{"country":"Russia","count":2388},{"country":"Ukraine","count":2815},{"country":"Mongolia","count":1020},{"country":"Afghanistan","count":4281},{"country":"Armenia","count":4200},{"country":"China","count":411},{"country":"Albania","count":4588},{"country":"Indonesia","count":2465},{"country":"China","count":1862},{"country":"France","count":861},{"country":"China","count":18},{"country":"Vietnam","count":3815}]},
-{"1981":[{"country":"Thailand","count":1024},{"country":"Brazil","count":3960},{"country":"China","count":2481},{"country":"China","count":4446},{"country":"Greece","count":3399},{"country":"Philippines","count":1692},{"country":"Philippines","count":4968},{"country":"Brazil","count":1979},{"country":"Philippines","count":3057},{"country":"Mexico","count":2907},{"country":"Sweden","count":4165},{"country":"Poland","count":2256},{"country":"Indonesia","count":4567},{"country":"Sweden","count":4199},{"country":"Czech Republic","count":4080},{"country":"Mexico","count":1450},{"country":"Russia","count":2842},{"country":"Afghanistan","count":4064},{"country":"Tanzania","count":2096},{"country":"South Korea","count":1944},{"country":"United States","count":660},{"country":"Poland","count":4408},{"country":"Guatemala","count":4461},{"country":"Brazil","count":297}]},
-{"1982":[{"country":"Russia","count":3442},{"country":"China","count":804},{"country":"Colombia","count":678},{"country":"Dominican Republic","count":1155},{"country":"China","count":3756},{"country":"United States","count":1728},{"country":"Indonesia","count":3512},{"country":"China","count":289},{"country":"Russia","count":2881},{"country":"Nigeria","count":4946},{"country":"South Korea","count":2678},{"country":"New Caledonia","count":2635},{"country":"China","count":1863},{"country":"United States","count":2398},{"country":"Canada","count":681},{"country":"China","count":143},{"country":"China","count":122},{"country":"Ukraine","count":1355},{"country":"Cameroon","count":2709},{"country":"Philippines","count":3234}]},
-{"1983":[{"country":"Indonesia","count":2621},{"country":"China","count":390},{"country":"Bosnia and Herzegovina","count":3116},{"country":"China","count":952},{"country":"Sweden","count":1772},{"country":"Malaysia","count":58},{"country":"Myanmar","count":1947},{"country":"Japan","count":1048},{"country":"Brazil","count":2246},{"country":"Russia","count":803},{"country":"Russia","count":4483},{"country":"Kazakhstan","count":4359}]},
-{"1984":[{"country":"Sweden","count":706},{"country":"Norway","count":2721},{"country":"Indonesia","count":3814},{"country":"France","count":1254},{"country":"China","count":2779},{"country":"Indonesia","count":69},{"country":"Finland","count":1536},{"country":"Ethiopia","count":946},{"country":"Russia","count":3443},{"country":"Russia","count":2705},{"country":"Indonesia","count":3097},{"country":"Luxembourg","count":615},{"country":"Philippines","count":4152},{"country":"China","count":918},{"country":"China","count":4179}]},
-{"1985":[{"country":"Sweden","count":2605},{"country":"China","count":1560},{"country":"Poland","count":3837},{"country":"China","count":2614},{"country":"Russia","count":474},{"country":"Philippines","count":1951},{"country":"Israel","count":2338},{"country":"Iran","count":3224},{"country":"France","count":1777},{"country":"Philippines","count":4701},{"country":"Bolivia","count":813},{"country":"Ukraine","count":4026},{"country":"Portugal","count":4108},{"country":"Poland","count":2983}]},
-{"1986":[{"country":"Indonesia","count":1029},{"country":"China","count":3494},{"country":"Indonesia","count":515},{"country":"Brazil","count":281},{"country":"Ukraine","count":4520},{"country":"Indonesia","count":3858},{"country":"China","count":3119},{"country":"Portugal","count":2657},{"country":"Portugal","count":266},{"country":"Indonesia","count":2583},{"country":"Malaysia","count":3111},{"country":"Brazil","count":3844},{"country":"East Timor","count":4687},{"country":"China","count":2232}]},
-{"1987":[{"country":"China","count":141},{"country":"China","count":4607},{"country":"Guatemala","count":4200},{"country":"Cayman Islands","count":3833},{"country":"Portugal","count":4366},{"country":"Sweden","count":3011},{"country":"Japan","count":4923},{"country":"France","count":2464},{"country":"Philippines","count":2888},{"country":"Morocco","count":3350},{"country":"France","count":1250},{"country":"Philippines","count":331},{"country":"Syria","count":2411},{"country":"China","count":2380},{"country":"South Africa","count":4934},{"country":"Colombia","count":4685},{"country":"Portugal","count":4041},{"country":"Argentina","count":2472},{"country":"Vietnam","count":2084},{"country":"Guatemala","count":997},{"country":"China","count":2694},{"country":"Brazil","count":3037},{"country":"Greece","count":4952},{"country":"Angola","count":3911}]},
-{"1988":[{"country":"Philippines","count":3157},{"country":"Indonesia","count":1895},{"country":"Syria","count":1368},{"country":"Indonesia","count":4682},{"country":"China","count":3076},{"country":"China","count":2967},{"country":"Ireland","count":4138},{"country":"Peru","count":3487},{"country":"Indonesia","count":4222},{"country":"Greece","count":2913},{"country":"Mali","count":2812},{"country":"Brazil","count":3099},{"country":"Honduras","count":4066},{"country":"Indonesia","count":905},{"country":"Burundi","count":3295},{"country":"Japan","count":1533},{"country":"United States","count":1062},{"country":"Canada","count":4325},{"country":"Germany","count":2700},{"country":"Russia","count":574},{"country":"China","count":1789},{"country":"Sweden","count":3060},{"country":"Portugal","count":4255},{"country":"Suriname","count":4494},{"country":"Russia","count":4135}]},
-{"1989":[{"country":"China","count":2173},{"country":"Indonesia","count":4534},{"country":"Russia","count":2095},{"country":"Latvia","count":3515},{"country":"Japan","count":2912},{"country":"Brazil","count":3505},{"country":"Portugal","count":4922},{"country":"Poland","count":2218},{"country":"China","count":3186},{"country":"Indonesia","count":876},{"country":"Poland","count":2961},{"country":"Portugal","count":1692},{"country":"Peru","count":2373},{"country":"Indonesia","count":3780},{"country":"Ireland","count":3431}]},
-{"1990":[{"country":"Poland","count":10},{"country":"China","count":3006},{"country":"Moldova","count":2326},{"country":"Philippines","count":831},{"country":"Peru","count":1230},{"country":"Poland","count":367},{"country":"Portugal","count":1927},{"country":"Russia","count":708},{"country":"China","count":3098},{"country":"China","count":2140},{"country":"Ukraine","count":4350},{"country":"Indonesia","count":3906},{"country":"China","count":1760},{"country":"Colombia","count":2904},{"country":"Philippines","count":2421},{"country":"France","count":2817},{"country":"Kazakhstan","count":3703},{"country":"China","count":4167},{"country":"Zimbabwe","count":4555},{"country":"Portugal","count":4835}]},
-{"1991":[{"country":"Russia","count":3017},{"country":"Greece","count":1176},{"country":"Sweden","count":1399},{"country":"Brazil","count":342},{"country":"Russia","count":427},{"country":"Iran","count":4461},{"country":"Ecuador","count":787},{"country":"Bulgaria","count":3270},{"country":"China","count":2471},{"country":"Russia","count":276},{"country":"China","count":4091}]},
-{"1992":[{"country":"China","count":3617},{"country":"China","count":4191},{"country":"France","count":114},{"country":"Philippines","count":3670},{"country":"Poland","count":2770},{"country":"Philippines","count":3313},{"country":"Japan","count":3933},{"country":"Poland","count":4673},{"country":"China","count":3545},{"country":"Czech Republic","count":4534},{"country":"Poland","count":1947}]},
-{"1993":[{"country":"Peru","count":3747},{"country":"Indonesia","count":2602},{"country":"Colombia","count":3508},{"country":"Peru","count":2438},{"country":"Poland","count":4152},{"country":"China","count":759},{"country":"Venezuela","count":4209},{"country":"Argentina","count":3076},{"country":"China","count":1965},{"country":"China","count":2810},{"country":"Russia","count":2289}]},
-{"1994":[{"country":"Indonesia","count":3404},{"country":"Russia","count":1766},{"country":"Canada","count":4360},{"country":"Egypt","count":1286},{"country":"Serbia","count":1884},{"country":"Venezuela","count":214},{"country":"Vietnam","count":3553},{"country":"Madagascar","count":4139},{"country":"Israel","count":997},{"country":"Indonesia","count":2516},{"country":"Togo","count":4355}]},
-{"1995":[{"country":"Palestinian Territory","count":2927},{"country":"Morocco","count":643},{"country":"Brazil","count":1925},{"country":"China","count":3733},{"country":"France","count":1271},{"country":"China","count":1346},{"country":"Estonia","count":1025},{"country":"Portugal","count":629},{"country":"Russia","count":1383},{"country":"Palestinian Territory","count":4427},{"country":"Peru","count":3863},{"country":"Indonesia","count":4543},{"country":"Poland","count":154},{"country":"Belarus","count":2095}]}]
+[
+  {
+    "1971": [
+      {
+        "country": "Peru",
+        "count": 3144
+      },
+      {
+        "country": "China",
+        "count": 2347
+      },
+      {
+        "country": "Guatemala",
+        "count": 4884
+      },
+      {
+        "country": "Portugal",
+        "count": 600
+      },
+      {
+        "country": "China",
+        "count": 889
+      },
+      {
+        "country": "Tanzania",
+        "count": 2150
+      },
+      {
+        "country": "Lithuania",
+        "count": 2921
+      },
+      {
+        "country": "China",
+        "count": 236
+      },
+      {
+        "country": "Morocco",
+        "count": 3217
+      },
+      {
+        "country": "China",
+        "count": 2411
+      },
+      {
+        "country": "Sweden",
+        "count": 1958
+      }
+    ]
+  },
+  {
+    "1972": [
+      {
+        "country": "Japan",
+        "count": 4680
+      },
+      {
+        "country": "Indonesia",
+        "count": 2209
+      },
+      {
+        "country": "Indonesia",
+        "count": 2254
+      },
+      {
+        "country": "China",
+        "count": 1154
+      },
+      {
+        "country": "Argentina",
+        "count": 4909
+      },
+      {
+        "country": "Ukraine",
+        "count": 1870
+      },
+      {
+        "country": "Poland",
+        "count": 1197
+      },
+      {
+        "country": "Philippines",
+        "count": 762
+      },
+      {
+        "country": "Chad",
+        "count": 3612
+      },
+      {
+        "country": "Indonesia",
+        "count": 2762
+      },
+      {
+        "country": "Greece",
+        "count": 181
+      },
+      {
+        "country": "Serbia",
+        "count": 1933
+      },
+      {
+        "country": "United States",
+        "count": 3495
+      },
+      {
+        "country": "Peru",
+        "count": 826
+      }
+    ]
+  },
+  {
+    "1973": [
+      {
+        "country": "Mexico",
+        "count": 3539
+      },
+      {
+        "country": "China",
+        "count": 3968
+      },
+      {
+        "country": "Mexico",
+        "count": 3452
+      },
+      {
+        "country": "Indonesia",
+        "count": 4949
+      },
+      {
+        "country": "Cuba",
+        "count": 1218
+      },
+      {
+        "country": "Portugal",
+        "count": 4189
+      },
+      {
+        "country": "Indonesia",
+        "count": 4666
+      },
+      {
+        "country": "Russia",
+        "count": 4184
+      },
+      {
+        "country": "China",
+        "count": 3981
+      },
+      {
+        "country": "Sierra Leone",
+        "count": 2003
+      },
+      {
+        "country": "Greece",
+        "count": 4555
+      },
+      {
+        "country": "Philippines",
+        "count": 2211
+      },
+      {
+        "country": "Russia",
+        "count": 797
+      },
+      {
+        "country": "Panama",
+        "count": 514
+      },
+      {
+        "country": "Indonesia",
+        "count": 651
+      }
+    ]
+  },
+  {
+    "1974": [
+      {
+        "country": "Serbia",
+        "count": 2180
+      },
+      {
+        "country": "Laos",
+        "count": 1064
+      },
+      {
+        "country": "Sweden",
+        "count": 561
+      },
+      {
+        "country": "Indonesia",
+        "count": 1329
+      },
+      {
+        "country": "Venezuela",
+        "count": 1931
+      },
+      {
+        "country": "China",
+        "count": 2434
+      },
+      {
+        "country": "Indonesia",
+        "count": 3082
+      },
+      {
+        "country": "China",
+        "count": 4255
+      },
+      {
+        "country": "Macedonia",
+        "count": 1306
+      },
+      {
+        "country": "Russia",
+        "count": 2568
+      },
+      {
+        "country": "Philippines",
+        "count": 3897
+      },
+      {
+        "country": "Poland",
+        "count": 2574
+      },
+      {
+        "country": "Russia",
+        "count": 210
+      },
+      {
+        "country": "Belarus",
+        "count": 3571
+      },
+      {
+        "country": "Mongolia",
+        "count": 4317
+      },
+      {
+        "country": "Russia",
+        "count": 4760
+      },
+      {
+        "country": "China",
+        "count": 4566
+      },
+      {
+        "country": "Brazil",
+        "count": 22
+      }
+    ]
+  },
+  {
+    "1975": [
+      {
+        "country": "Malawi",
+        "count": 2358
+      },
+      {
+        "country": "Canada",
+        "count": 4096
+      },
+      {
+        "country": "Indonesia",
+        "count": 3707
+      },
+      {
+        "country": "China",
+        "count": 2903
+      },
+      {
+        "country": "Malaysia",
+        "count": 3779
+      },
+      {
+        "country": "Bulgaria",
+        "count": 3000
+      },
+      {
+        "country": "Senegal",
+        "count": 1731
+      },
+      {
+        "country": "Mexico",
+        "count": 2200
+      },
+      {
+        "country": "Philippines",
+        "count": 4136
+      },
+      {
+        "country": "Argentina",
+        "count": 3409
+      },
+      {
+        "country": "Czech Republic",
+        "count": 452
+      },
+      {
+        "country": "China",
+        "count": 1049
+      }
+    ]
+  },
+  {
+    "1976": [
+      {
+        "country": "Canada",
+        "count": 4841
+      },
+      {
+        "country": "China",
+        "count": 3367
+      },
+      {
+        "country": "Iran",
+        "count": 2254
+      },
+      {
+        "country": "China",
+        "count": 4427
+      },
+      {
+        "country": "Cyprus",
+        "count": 4166
+      },
+      {
+        "country": "Croatia",
+        "count": 1272
+      },
+      {
+        "country": "China",
+        "count": 1040
+      },
+      {
+        "country": "Czech Republic",
+        "count": 2599
+      },
+      {
+        "country": "Russia",
+        "count": 4568
+      },
+      {
+        "country": "Ukraine",
+        "count": 598
+      },
+      {
+        "country": "China",
+        "count": 4448
+      }
+    ]
+  },
+  {
+    "1977": [
+      {
+        "country": "Brazil",
+        "count": 4766
+      },
+      {
+        "country": "El Salvador",
+        "count": 3621
+      },
+      {
+        "country": "Argentina",
+        "count": 1855
+      },
+      {
+        "country": "Sudan",
+        "count": 2796
+      },
+      {
+        "country": "Indonesia",
+        "count": 1753
+      },
+      {
+        "country": "Poland",
+        "count": 1195
+      },
+      {
+        "country": "China",
+        "count": 4838
+      },
+      {
+        "country": "China",
+        "count": 1821
+      },
+      {
+        "country": "Russia",
+        "count": 4316
+      },
+      {
+        "country": "Czech Republic",
+        "count": 3101
+      },
+      {
+        "country": "China",
+        "count": 2907
+      },
+      {
+        "country": "China",
+        "count": 599
+      },
+      {
+        "country": "China",
+        "count": 2446
+      },
+      {
+        "country": "United States",
+        "count": 4117
+      },
+      {
+        "country": "Indonesia",
+        "count": 3483
+      },
+      {
+        "country": "Thailand",
+        "count": 1803
+      },
+      {
+        "country": "China",
+        "count": 110
+      }
+    ]
+  },
+  {
+    "1978": [
+      {
+        "country": "Guatemala",
+        "count": 842
+      },
+      {
+        "country": "Egypt",
+        "count": 1266
+      },
+      {
+        "country": "Brazil",
+        "count": 1100
+      },
+      {
+        "country": "Portugal",
+        "count": 2353
+      },
+      {
+        "country": "Russia",
+        "count": 219
+      },
+      {
+        "country": "Ukraine",
+        "count": 1216
+      },
+      {
+        "country": "China",
+        "count": 4539
+      },
+      {
+        "country": "Japan",
+        "count": 4849
+      },
+      {
+        "country": "Brazil",
+        "count": 2041
+      },
+      {
+        "country": "Mauritius",
+        "count": 4073
+      },
+      {
+        "country": "China",
+        "count": 170
+      },
+      {
+        "country": "Jamaica",
+        "count": 2862
+      }
+    ]
+  },
+  {
+    "1979": [
+      {
+        "country": "Portugal",
+        "count": 866
+      },
+      {
+        "country": "China",
+        "count": 3928
+      },
+      {
+        "country": "Poland",
+        "count": 3969
+      },
+      {
+        "country": "Bolivia",
+        "count": 3732
+      },
+      {
+        "country": "Thailand",
+        "count": 4503
+      },
+      {
+        "country": "Brazil",
+        "count": 640
+      },
+      {
+        "country": "Portugal",
+        "count": 2756
+      },
+      {
+        "country": "Vietnam",
+        "count": 2542
+      },
+      {
+        "country": "Russia",
+        "count": 830
+      },
+      {
+        "country": "China",
+        "count": 1882
+      },
+      {
+        "country": "United States",
+        "count": 3965
+      },
+      {
+        "country": "China",
+        "count": 3873
+      },
+      {
+        "country": "Ireland",
+        "count": 2046
+      },
+      {
+        "country": "China",
+        "count": 1797
+      },
+      {
+        "country": "Malta",
+        "count": 3554
+      },
+      {
+        "country": "Ukraine",
+        "count": 4660
+      },
+      {
+        "country": "Ukraine",
+        "count": 4727
+      },
+      {
+        "country": "Bolivia",
+        "count": 1089
+      },
+      {
+        "country": "China",
+        "count": 167
+      },
+      {
+        "country": "Canada",
+        "count": 4036
+      },
+      {
+        "country": "Myanmar",
+        "count": 1613
+      },
+      {
+        "country": "Netherlands",
+        "count": 4957
+      },
+      {
+        "country": "Comoros",
+        "count": 4384
+      }
+    ]
+  },
+  {
+    "1980": [
+      {
+        "country": "France",
+        "count": 4662
+      },
+      {
+        "country": "Philippines",
+        "count": 2549
+      },
+      {
+        "country": "Peru",
+        "count": 2139
+      },
+      {
+        "country": "Argentina",
+        "count": 345
+      },
+      {
+        "country": "Brazil",
+        "count": 1069
+      },
+      {
+        "country": "Indonesia",
+        "count": 4054
+      },
+      {
+        "country": "Indonesia",
+        "count": 125
+      },
+      {
+        "country": "Indonesia",
+        "count": 4203
+      },
+      {
+        "country": "Indonesia",
+        "count": 289
+      },
+      {
+        "country": "Philippines",
+        "count": 3837
+      },
+      {
+        "country": "Nicaragua",
+        "count": 1515
+      },
+      {
+        "country": "Colombia",
+        "count": 2876
+      },
+      {
+        "country": "United States",
+        "count": 4121
+      },
+      {
+        "country": "Russia",
+        "count": 2388
+      },
+      {
+        "country": "Ukraine",
+        "count": 2815
+      },
+      {
+        "country": "Mongolia",
+        "count": 1020
+      },
+      {
+        "country": "Afghanistan",
+        "count": 4281
+      },
+      {
+        "country": "Armenia",
+        "count": 4200
+      },
+      {
+        "country": "China",
+        "count": 411
+      },
+      {
+        "country": "Albania",
+        "count": 4588
+      },
+      {
+        "country": "Indonesia",
+        "count": 2465
+      },
+      {
+        "country": "China",
+        "count": 1862
+      },
+      {
+        "country": "France",
+        "count": 861
+      },
+      {
+        "country": "China",
+        "count": 18
+      },
+      {
+        "country": "Vietnam",
+        "count": 3815
+      }
+    ]
+  },
+  {
+    "1981": [
+      {
+        "country": "Thailand",
+        "count": 1024
+      },
+      {
+        "country": "Brazil",
+        "count": 3960
+      },
+      {
+        "country": "China",
+        "count": 2481
+      },
+      {
+        "country": "China",
+        "count": 4446
+      },
+      {
+        "country": "Greece",
+        "count": 3399
+      },
+      {
+        "country": "Philippines",
+        "count": 1692
+      },
+      {
+        "country": "Philippines",
+        "count": 4968
+      },
+      {
+        "country": "Brazil",
+        "count": 1979
+      },
+      {
+        "country": "Philippines",
+        "count": 3057
+      },
+      {
+        "country": "Mexico",
+        "count": 2907
+      },
+      {
+        "country": "Sweden",
+        "count": 4165
+      },
+      {
+        "country": "Poland",
+        "count": 2256
+      },
+      {
+        "country": "Indonesia",
+        "count": 4567
+      },
+      {
+        "country": "Sweden",
+        "count": 4199
+      },
+      {
+        "country": "Czech Republic",
+        "count": 4080
+      },
+      {
+        "country": "Mexico",
+        "count": 1450
+      },
+      {
+        "country": "Russia",
+        "count": 2842
+      },
+      {
+        "country": "Afghanistan",
+        "count": 4064
+      },
+      {
+        "country": "Tanzania",
+        "count": 2096
+      },
+      {
+        "country": "South Korea",
+        "count": 1944
+      },
+      {
+        "country": "United States",
+        "count": 660
+      },
+      {
+        "country": "Poland",
+        "count": 4408
+      },
+      {
+        "country": "Guatemala",
+        "count": 4461
+      },
+      {
+        "country": "Brazil",
+        "count": 297
+      }
+    ]
+  },
+  {
+    "1982": [
+      {
+        "country": "Russia",
+        "count": 3442
+      },
+      {
+        "country": "China",
+        "count": 804
+      },
+      {
+        "country": "Colombia",
+        "count": 678
+      },
+      {
+        "country": "Dominican Republic",
+        "count": 1155
+      },
+      {
+        "country": "China",
+        "count": 3756
+      },
+      {
+        "country": "United States",
+        "count": 1728
+      },
+      {
+        "country": "Indonesia",
+        "count": 3512
+      },
+      {
+        "country": "China",
+        "count": 289
+      },
+      {
+        "country": "Russia",
+        "count": 2881
+      },
+      {
+        "country": "Nigeria",
+        "count": 4946
+      },
+      {
+        "country": "South Korea",
+        "count": 2678
+      },
+      {
+        "country": "New Caledonia",
+        "count": 2635
+      },
+      {
+        "country": "China",
+        "count": 1863
+      },
+      {
+        "country": "United States",
+        "count": 2398
+      },
+      {
+        "country": "Canada",
+        "count": 681
+      },
+      {
+        "country": "China",
+        "count": 143
+      },
+      {
+        "country": "China",
+        "count": 122
+      },
+      {
+        "country": "Ukraine",
+        "count": 1355
+      },
+      {
+        "country": "Cameroon",
+        "count": 2709
+      },
+      {
+        "country": "Philippines",
+        "count": 3234
+      }
+    ]
+  },
+  {
+    "1983": [
+      {
+        "country": "Indonesia",
+        "count": 2621
+      },
+      {
+        "country": "China",
+        "count": 390
+      },
+      {
+        "country": "Bosnia and Herzegovina",
+        "count": 3116
+      },
+      {
+        "country": "China",
+        "count": 952
+      },
+      {
+        "country": "Sweden",
+        "count": 1772
+      },
+      {
+        "country": "Malaysia",
+        "count": 58
+      },
+      {
+        "country": "Myanmar",
+        "count": 1947
+      },
+      {
+        "country": "Japan",
+        "count": 1048
+      },
+      {
+        "country": "Brazil",
+        "count": 2246
+      },
+      {
+        "country": "Russia",
+        "count": 803
+      },
+      {
+        "country": "Russia",
+        "count": 4483
+      },
+      {
+        "country": "Kazakhstan",
+        "count": 4359
+      }
+    ]
+  },
+  {
+    "1984": [
+      {
+        "country": "Sweden",
+        "count": 706
+      },
+      {
+        "country": "Norway",
+        "count": 2721
+      },
+      {
+        "country": "Indonesia",
+        "count": 3814
+      },
+      {
+        "country": "France",
+        "count": 1254
+      },
+      {
+        "country": "China",
+        "count": 2779
+      },
+      {
+        "country": "Indonesia",
+        "count": 69
+      },
+      {
+        "country": "Finland",
+        "count": 1536
+      },
+      {
+        "country": "Ethiopia",
+        "count": 946
+      },
+      {
+        "country": "Russia",
+        "count": 3443
+      },
+      {
+        "country": "Russia",
+        "count": 2705
+      },
+      {
+        "country": "Indonesia",
+        "count": 3097
+      },
+      {
+        "country": "Luxembourg",
+        "count": 615
+      },
+      {
+        "country": "Philippines",
+        "count": 4152
+      },
+      {
+        "country": "China",
+        "count": 918
+      },
+      {
+        "country": "China",
+        "count": 4179
+      }
+    ]
+  },
+  {
+    "1985": [
+      {
+        "country": "Sweden",
+        "count": 2605
+      },
+      {
+        "country": "China",
+        "count": 1560
+      },
+      {
+        "country": "Poland",
+        "count": 3837
+      },
+      {
+        "country": "China",
+        "count": 2614
+      },
+      {
+        "country": "Russia",
+        "count": 474
+      },
+      {
+        "country": "Philippines",
+        "count": 1951
+      },
+      {
+        "country": "Israel",
+        "count": 2338
+      },
+      {
+        "country": "Iran",
+        "count": 3224
+      },
+      {
+        "country": "France",
+        "count": 1777
+      },
+      {
+        "country": "Philippines",
+        "count": 4701
+      },
+      {
+        "country": "Bolivia",
+        "count": 813
+      },
+      {
+        "country": "Ukraine",
+        "count": 4026
+      },
+      {
+        "country": "Portugal",
+        "count": 4108
+      },
+      {
+        "country": "Poland",
+        "count": 2983
+      }
+    ]
+  },
+  {
+    "1986": [
+      {
+        "country": "Indonesia",
+        "count": 1029
+      },
+      {
+        "country": "China",
+        "count": 3494
+      },
+      {
+        "country": "Indonesia",
+        "count": 515
+      },
+      {
+        "country": "Brazil",
+        "count": 281
+      },
+      {
+        "country": "Ukraine",
+        "count": 4520
+      },
+      {
+        "country": "Indonesia",
+        "count": 3858
+      },
+      {
+        "country": "China",
+        "count": 3119
+      },
+      {
+        "country": "Portugal",
+        "count": 2657
+      },
+      {
+        "country": "Portugal",
+        "count": 266
+      },
+      {
+        "country": "Indonesia",
+        "count": 2583
+      },
+      {
+        "country": "Malaysia",
+        "count": 3111
+      },
+      {
+        "country": "Brazil",
+        "count": 3844
+      },
+      {
+        "country": "East Timor",
+        "count": 4687
+      },
+      {
+        "country": "China",
+        "count": 2232
+      }
+    ]
+  },
+  {
+    "1987": [
+      {
+        "country": "China",
+        "count": 141
+      },
+      {
+        "country": "China",
+        "count": 4607
+      },
+      {
+        "country": "Guatemala",
+        "count": 4200
+      },
+      {
+        "country": "Cayman Islands",
+        "count": 3833
+      },
+      {
+        "country": "Portugal",
+        "count": 4366
+      },
+      {
+        "country": "Sweden",
+        "count": 3011
+      },
+      {
+        "country": "Japan",
+        "count": 4923
+      },
+      {
+        "country": "France",
+        "count": 2464
+      },
+      {
+        "country": "Philippines",
+        "count": 2888
+      },
+      {
+        "country": "Morocco",
+        "count": 3350
+      },
+      {
+        "country": "France",
+        "count": 1250
+      },
+      {
+        "country": "Philippines",
+        "count": 331
+      },
+      {
+        "country": "Syria",
+        "count": 2411
+      },
+      {
+        "country": "China",
+        "count": 2380
+      },
+      {
+        "country": "South Africa",
+        "count": 4934
+      },
+      {
+        "country": "Colombia",
+        "count": 4685
+      },
+      {
+        "country": "Portugal",
+        "count": 4041
+      },
+      {
+        "country": "Argentina",
+        "count": 2472
+      },
+      {
+        "country": "Vietnam",
+        "count": 2084
+      },
+      {
+        "country": "Guatemala",
+        "count": 997
+      },
+      {
+        "country": "China",
+        "count": 2694
+      },
+      {
+        "country": "Brazil",
+        "count": 3037
+      },
+      {
+        "country": "Greece",
+        "count": 4952
+      },
+      {
+        "country": "Angola",
+        "count": 3911
+      }
+    ]
+  },
+  {
+    "1988": [
+      {
+        "country": "Philippines",
+        "count": 3157
+      },
+      {
+        "country": "Indonesia",
+        "count": 1895
+      },
+      {
+        "country": "Syria",
+        "count": 1368
+      },
+      {
+        "country": "Indonesia",
+        "count": 4682
+      },
+      {
+        "country": "China",
+        "count": 3076
+      },
+      {
+        "country": "China",
+        "count": 2967
+      },
+      {
+        "country": "Ireland",
+        "count": 4138
+      },
+      {
+        "country": "Peru",
+        "count": 3487
+      },
+      {
+        "country": "Indonesia",
+        "count": 4222
+      },
+      {
+        "country": "Greece",
+        "count": 2913
+      },
+      {
+        "country": "Mali",
+        "count": 2812
+      },
+      {
+        "country": "Brazil",
+        "count": 3099
+      },
+      {
+        "country": "Honduras",
+        "count": 4066
+      },
+      {
+        "country": "Indonesia",
+        "count": 905
+      },
+      {
+        "country": "Burundi",
+        "count": 3295
+      },
+      {
+        "country": "Japan",
+        "count": 1533
+      },
+      {
+        "country": "United States",
+        "count": 1062
+      },
+      {
+        "country": "Canada",
+        "count": 4325
+      },
+      {
+        "country": "Germany",
+        "count": 2700
+      },
+      {
+        "country": "Russia",
+        "count": 574
+      },
+      {
+        "country": "China",
+        "count": 1789
+      },
+      {
+        "country": "Sweden",
+        "count": 3060
+      },
+      {
+        "country": "Portugal",
+        "count": 4255
+      },
+      {
+        "country": "Suriname",
+        "count": 4494
+      },
+      {
+        "country": "Russia",
+        "count": 4135
+      }
+    ]
+  },
+  {
+    "1989": [
+      {
+        "country": "China",
+        "count": 2173
+      },
+      {
+        "country": "Indonesia",
+        "count": 4534
+      },
+      {
+        "country": "Russia",
+        "count": 2095
+      },
+      {
+        "country": "Latvia",
+        "count": 3515
+      },
+      {
+        "country": "Japan",
+        "count": 2912
+      },
+      {
+        "country": "Brazil",
+        "count": 3505
+      },
+      {
+        "country": "Portugal",
+        "count": 4922
+      },
+      {
+        "country": "Poland",
+        "count": 2218
+      },
+      {
+        "country": "China",
+        "count": 3186
+      },
+      {
+        "country": "Indonesia",
+        "count": 876
+      },
+      {
+        "country": "Poland",
+        "count": 2961
+      },
+      {
+        "country": "Portugal",
+        "count": 1692
+      },
+      {
+        "country": "Peru",
+        "count": 2373
+      },
+      {
+        "country": "Indonesia",
+        "count": 3780
+      },
+      {
+        "country": "Ireland",
+        "count": 3431
+      }
+    ]
+  },
+  {
+    "1990": [
+      {
+        "country": "Poland",
+        "count": 10
+      },
+      {
+        "country": "China",
+        "count": 3006
+      },
+      {
+        "country": "Moldova",
+        "count": 2326
+      },
+      {
+        "country": "Philippines",
+        "count": 831
+      },
+      {
+        "country": "Peru",
+        "count": 1230
+      },
+      {
+        "country": "Poland",
+        "count": 367
+      },
+      {
+        "country": "Portugal",
+        "count": 1927
+      },
+      {
+        "country": "Russia",
+        "count": 708
+      },
+      {
+        "country": "China",
+        "count": 3098
+      },
+      {
+        "country": "China",
+        "count": 2140
+      },
+      {
+        "country": "Ukraine",
+        "count": 4350
+      },
+      {
+        "country": "Indonesia",
+        "count": 3906
+      },
+      {
+        "country": "China",
+        "count": 1760
+      },
+      {
+        "country": "Colombia",
+        "count": 2904
+      },
+      {
+        "country": "Philippines",
+        "count": 2421
+      },
+      {
+        "country": "France",
+        "count": 2817
+      },
+      {
+        "country": "Kazakhstan",
+        "count": 3703
+      },
+      {
+        "country": "China",
+        "count": 4167
+      },
+      {
+        "country": "Zimbabwe",
+        "count": 4555
+      },
+      {
+        "country": "Portugal",
+        "count": 4835
+      }
+    ]
+  },
+  {
+    "1991": [
+      {
+        "country": "Russia",
+        "count": 3017
+      },
+      {
+        "country": "Greece",
+        "count": 1176
+      },
+      {
+        "country": "Sweden",
+        "count": 1399
+      },
+      {
+        "country": "Brazil",
+        "count": 342
+      },
+      {
+        "country": "Russia",
+        "count": 427
+      },
+      {
+        "country": "Iran",
+        "count": 4461
+      },
+      {
+        "country": "Ecuador",
+        "count": 787
+      },
+      {
+        "country": "Bulgaria",
+        "count": 3270
+      },
+      {
+        "country": "China",
+        "count": 2471
+      },
+      {
+        "country": "Russia",
+        "count": 276
+      },
+      {
+        "country": "China",
+        "count": 4091
+      }
+    ]
+  },
+  {
+    "1992": [
+      {
+        "country": "China",
+        "count": 3617
+      },
+      {
+        "country": "China",
+        "count": 4191
+      },
+      {
+        "country": "France",
+        "count": 114
+      },
+      {
+        "country": "Philippines",
+        "count": 3670
+      },
+      {
+        "country": "Poland",
+        "count": 2770
+      },
+      {
+        "country": "Philippines",
+        "count": 3313
+      },
+      {
+        "country": "Japan",
+        "count": 3933
+      },
+      {
+        "country": "Poland",
+        "count": 4673
+      },
+      {
+        "country": "China",
+        "count": 3545
+      },
+      {
+        "country": "Czech Republic",
+        "count": 4534
+      },
+      {
+        "country": "Poland",
+        "count": 1947
+      }
+    ]
+  },
+  {
+    "1993": [
+      {
+        "country": "Peru",
+        "count": 3747
+      },
+      {
+        "country": "Indonesia",
+        "count": 2602
+      },
+      {
+        "country": "Colombia",
+        "count": 3508
+      },
+      {
+        "country": "Peru",
+        "count": 2438
+      },
+      {
+        "country": "Poland",
+        "count": 4152
+      },
+      {
+        "country": "China",
+        "count": 759
+      },
+      {
+        "country": "Venezuela",
+        "count": 4209
+      },
+      {
+        "country": "Argentina",
+        "count": 3076
+      },
+      {
+        "country": "China",
+        "count": 1965
+      },
+      {
+        "country": "China",
+        "count": 2810
+      },
+      {
+        "country": "Russia",
+        "count": 2289
+      }
+    ]
+  },
+  {
+    "1994": [
+      {
+        "country": "Indonesia",
+        "count": 3404
+      },
+      {
+        "country": "Russia",
+        "count": 1766
+      },
+      {
+        "country": "Canada",
+        "count": 4360
+      },
+      {
+        "country": "Egypt",
+        "count": 1286
+      },
+      {
+        "country": "Serbia",
+        "count": 1884
+      },
+      {
+        "country": "Venezuela",
+        "count": 214
+      },
+      {
+        "country": "Vietnam",
+        "count": 3553
+      },
+      {
+        "country": "Madagascar",
+        "count": 4139
+      },
+      {
+        "country": "Israel",
+        "count": 997
+      },
+      {
+        "country": "Indonesia",
+        "count": 2516
+      },
+      {
+        "country": "Togo",
+        "count": 4355
+      }
+    ]
+  },
+  {
+    "1995": [
+      {
+        "country": "Palestinian Territory",
+        "count": 2927
+      },
+      {
+        "country": "Morocco",
+        "count": 643
+      },
+      {
+        "country": "Brazil",
+        "count": 1925
+      },
+      {
+        "country": "China",
+        "count": 3733
+      },
+      {
+        "country": "France",
+        "count": 1271
+      },
+      {
+        "country": "China",
+        "count": 1346
+      },
+      {
+        "country": "Estonia",
+        "count": 1025
+      },
+      {
+        "country": "Portugal",
+        "count": 629
+      },
+      {
+        "country": "Russia",
+        "count": 1383
+      },
+      {
+        "country": "Palestinian Territory",
+        "count": 4427
+      },
+      {
+        "country": "Peru",
+        "count": 3863
+      },
+      {
+        "country": "Indonesia",
+        "count": 4543
+      },
+      {
+        "country": "Poland",
+        "count": 154
+      },
+      {
+        "country": "Belarus",
+        "count": 2095
+      }
+    ]
+  }
+]
