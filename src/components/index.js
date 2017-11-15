@@ -5,3 +5,4 @@
 export {default as MapComponent} from './map';
 export {default as SliderComponent} from './year-slider';
 export {default as EventBox} from './event-box';
+export {default as CountryInfo} from './country-info';
