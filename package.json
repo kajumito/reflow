@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all -p watch-sass start-dev-server",
-    "start-dev-server": "webpack-dev-server --output-path /dist --config webpack.config.js --progress",
+    "start-dev-server": "webpack-dev-server --env.dev --output-path /dist --config webpack.config.js --progress",
     "build-sass": "node-sass-chokidar --include-path ./src/styles/ src/styles/index.scss -o dist/styles --output-style compressed",
     "watch-sass": "npm run build-sass && npm run build-sass -- -w",
-    "build": "webpack --optimize-minimize",
+    "build": "webpack --env.prod",
     "refactor-jsons": "node ./scripts/refactorJsons.js"
   },
   "repository": {
