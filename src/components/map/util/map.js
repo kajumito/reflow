@@ -27,7 +27,7 @@ export const processCoordinates = (traffic) => {
 
   if (traffic[window.year]) {
     traffic[window.year].map(({country}) => {
-      if (!country || country === 'Various/Unknown') return true;
+      if (!country || country === 'Various/Unknown' || country === 'Stateless') return true;
       const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
       const toCountry = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
       console.log(country, toCountry);

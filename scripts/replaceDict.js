@@ -19,8 +19,11 @@ module.exports = {
     'Iran (Islamic Rep. of)': 'Iran',
     'Kyrgyz Republic': 'Kyrgyzstan',
     'Korea, Rep.': 'South Korea',
+    'Rep. of Korea': 'South Korea',
+    'Dem. People\'s South Korea': 'South Korea',
     'Lao PDR': 'Laos',
     'Macedonia, FYR': 'Macedonia',
+    'The former Yugoslav Republic of Macedonia': 'Macedonia',
     'Korea, Dem. People�s Rep.': 'North Korea',
     'Korea, Dem. People\'s Rep.': 'North Korea',
     'West Bank and Gaza': 'Palestine',
@@ -28,9 +31,15 @@ module.exports = {
     'South Sudan': 'S. Sudan',
     'Slovak Republic': 'Slovakia',
     'Syrian Arab Republic': 'Syria',
-    'United States': 'United States of America',
+    'Syrian Arab Rep.': 'Syria',
     'Venezuela, RB': 'Venezuela',
-    'Yemen, Rep.': 'Yemen'
+    'Yemen, Rep.': 'Yemen',
+    'Serbia and Kosovo (S/RES/1244 (1999))': 'Kosovo',
+    'Viet Nam': 'Vietnam',
+    'United Rep. of Tanzania': 'Tanzania',
+    'Rep. of Moldova': 'Moldova',
+    'Venezuela (Bolivarian Republic of)': 'Venezuela',
+    'United States of America': 'United States'
 };
 
 // Countries we do not have on our map... these are probably

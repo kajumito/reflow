@@ -31,7 +31,8 @@ readFiles('./src/data/')
     .then((response) => {
         // Here's the magic
         response.map(file => {
-            const regExp = new RegExp(Object.keys(replaceDict).join('|'), 'ig')
+            const regExp = new RegExp(Object.keys(replaceDict).join('|')
+                .replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$]/g, "\\$&"), 'ig');
             const newContent = file.data.replace(regExp, match => {
                 console.log(`Replaced: "${match}" with "${replaceDict[match]}" in ${file.name}`);
                 return replaceDict[match];
