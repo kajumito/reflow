@@ -1380,7 +1380,7 @@
     "2014": "8618000000",
     "2015": "8854000000",
     "2016": "9047000000",
-    "Country Name": "Bahamas, The",
+    "Country Name": "Bahamas",
     "Country Code": "BHS",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -1443,7 +1443,7 @@
     "2014": "18521475376",
     "2015": "16173806635",
     "2016": "16559695719",
-    "Country Name": "Bosnia and Herzegovina",
+    "Country Name": "Bosnia and Herz.",
     "Country Code": "BIH",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -1884,7 +1884,7 @@
     "2014": "17123125493",
     "2015": "12930394938",
     "2016": "11400266877",
-    "Country Name": "Brunei Darussalam",
+    "Country Name": "Brunei",
     "Country Code": "BRN",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -2073,7 +2073,7 @@
     "2014": "1702898940",
     "2015": "1583776760",
     "2016": "1756124677",
-    "Country Name": "Central African Republic",
+    "Country Name": "Central African Rep.",
     "Country Code": "CAF",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -2640,7 +2640,7 @@
     "2014": "34028119333",
     "2015": "36188521107",
     "2016": "34998638634",
-    "Country Name": "Congo, Dem. Rep.",
+    "Country Name": "Dem. Rep. Congo",
     "Country Code": "COD",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -2703,7 +2703,7 @@
     "2014": "14177437627",
     "2015": "8553154506",
     "2016": "7833509443",
-    "Country Name": "Congo, Rep.",
+    "Country Name": "Congo",
     "Country Code": "COG",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -3333,7 +3333,7 @@
     "2014": "2,08E+11",
     "2015": "1,85E+11",
     "2016": "1,93E+11",
-    "Country Name": "Czech Republic",
+    "Country Name": "Czechia",
     "Country Code": "CZE",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -3648,7 +3648,7 @@
     "2014": "65231032303",
     "2015": "68102618092",
     "2016": "71583553488",
-    "Country Name": "Dominican Republic",
+    "Country Name": "Dominican Rep.",
     "Country Code": "DOM",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -4152,7 +4152,7 @@
     "2014": "3,06E+11",
     "2015": "3,33E+11",
     "2016": "3,36E+11",
-    "Country Name": "Egypt, Arab Rep.",
+    "Country Name": "Egypt",
     "Country Code": "EGY",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -5349,7 +5349,7 @@
     "2014": "849122624,8",
     "2015": "938794719,4",
     "2016": "964599177,5",
-    "Country Name": "Gambia, The",
+    "Country Name": "Gambia",
     "Country Code": "GMB",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -5475,7 +5475,7 @@
     "2014": "21461989483",
     "2015": "12162117377",
     "2016": "10178967206",
-    "Country Name": "Equatorial Guinea",
+    "Country Name": "Eq. Guinea",
     "Country Code": "GNQ",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -6987,7 +6987,7 @@
     "2014": "4,25E+11",
     "2015": "3,93E+11",
     "2016": "",
-    "Country Name": "Iran, Islamic Rep.",
+    "Country Name": "Iran",
     "Country Code": "IRN",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -7617,7 +7617,7 @@
     "2014": "7468096567",
     "2015": "6678178340",
     "2016": "6551287938",
-    "Country Name": "Kyrgyz Republic",
+    "Country Name": "Kyrgyzstan",
     "Country Code": "KGZ",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -7869,7 +7869,7 @@
     "2014": "1,41E+12",
     "2015": "1,38E+12",
     "2016": "1,41E+12",
-    "Country Name": "Korea, Rep.",
+    "Country Name": "South Korea",
     "Country Code": "KOR",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -8058,7 +8058,7 @@
     "2014": "13268297522",
     "2015": "14390323462",
     "2016": "15903437790",
-    "Country Name": "Lao PDR",
+    "Country Name": "Laos",
     "Country Code": "LAO",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -9822,7 +9822,7 @@
     "2014": "11362272838",
     "2015": "10051659161",
     "2016": "10899583155",
-    "Country Name": "Macedonia, FYR",
+    "Country Name": "Macedonia",
     "Country Code": "MKD",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -12090,7 +12090,7 @@
     "2014": "",
     "2015": "",
     "2016": "",
-    "Country Name": "Korea, Dem. People�s Rep.",
+    "Country Name": "North Korea",
     "Country Code": "PRK",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -12279,7 +12279,7 @@
     "2014": "12715600000",
     "2015": "12673000000",
     "2016": "13397100000",
-    "Country Name": "West Bank and Gaza",
+    "Country Name": "Palestine",
     "Country Code": "PSE",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -12657,7 +12657,7 @@
     "2014": "2,06E+12",
     "2015": "1,37E+12",
     "2016": "1,28E+12",
-    "Country Name": "Russian Federation",
+    "Country Name": "Russia",
     "Country Code": "RUS",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -13098,7 +13098,7 @@
     "2014": "1156563123",
     "2015": "1129164719",
     "2016": "1202125000",
-    "Country Name": "Solomon Islands",
+    "Country Name": "Solomon Is.",
     "Country Code": "SLB",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -13539,7 +13539,7 @@
     "2014": "13282084034",
     "2015": "9015221096",
     "2016": "",
-    "Country Name": "South Sudan",
+    "Country Name": "S. Sudan",
     "Country Code": "SSD",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -13854,7 +13854,7 @@
     "2014": "1,01E+11",
     "2015": "87267593788",
     "2016": "89551834323",
-    "Country Name": "Slovak Republic",
+    "Country Name": "Slovakia",
     "Country Code": "SVK",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -14232,7 +14232,7 @@
     "2014": "",
     "2015": "",
     "2016": "",
-    "Country Name": "Syrian Arab Republic",
+    "Country Name": "Syria",
     "Country Code": "SYR",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -15744,7 +15744,7 @@
     "2014": "1,74E+13",
     "2015": "1,80E+13",
     "2016": "1,86E+13",
-    "Country Name": "United States",
+    "Country Name": "United States of America of America of America",
     "Country Code": "USA",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -15933,7 +15933,7 @@
     "2014": "",
     "2015": "",
     "2016": "",
-    "Country Name": "Venezuela, RB",
+    "Country Name": "Venezuela",
     "Country Code": "VEN",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"
@@ -16437,7 +16437,7 @@
     "2014": "43228583935",
     "2015": "37733919936",
     "2016": "27317605346",
-    "Country Name": "Yemen, Rep.",
+    "Country Name": "Yemen",
     "Country Code": "YEM",
     "Indicator Name": "GDP (current US$)",
     "Indicator Code": "NY.GDP.MKTP.CD"

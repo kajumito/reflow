@@ -1301,7 +1301,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Bahamas, The": {
+   "Bahamas": {
       "1960": 109528,
       "1961": 115108,
       "1962": 121083,
@@ -1363,7 +1363,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Bosnia and Herzegovina": {
+   "Bosnia and Herz.": {
       "1960": 3225668,
       "1961": 3288602,
       "1962": 3353226,
@@ -1797,7 +1797,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Brunei Darussalam": {
+   "Brunei": {
       "1960": 81745,
       "1961": 85596,
       "1962": 89516,
@@ -1983,7 +1983,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Central African Republic": {
+   "Central African Rep.": {
       "1960": 1503508,
       "1961": 1529227,
       "1962": 1556661,
@@ -2541,7 +2541,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Congo, Dem. Rep.": {
+   "Dem. Rep. Congo": {
       "1960": 15248251,
       "1961": 15637733,
       "1962": 16041263,
@@ -2603,7 +2603,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Congo, Rep.": {
+   "Congo": {
       "1960": 1037220,
       "1961": 1064111,
       "1962": 1092292,
@@ -3223,7 +3223,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Czech Republic": {
+   "Czechia": {
       "1960": 9602006,
       "1961": 9586651,
       "1962": 9624660,
@@ -3533,7 +3533,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Dominican Republic": {
+   "Dominican Rep.": {
       "1960": 3294042,
       "1961": 3406299,
       "1962": 3521278,
@@ -4029,7 +4029,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Egypt, Arab Rep.": {
+   "Egypt": {
       "1960": 26996533,
       "1961": 27744712,
       "1962": 28506176,
@@ -5207,7 +5207,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Gambia, The": {
+   "Gambia": {
       "1960": 367928,
       "1961": 376737,
       "1962": 383523,
@@ -5331,7 +5331,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Equatorial Guinea": {
+   "Eq. Guinea": {
       "1960": 255323,
       "1961": 258947,
       "1962": 262590,
@@ -6819,7 +6819,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Iran, Islamic Rep.": {
+   "Iran": {
       "1960": 21906903,
       "1961": 22480418,
       "1962": 23071429,
@@ -7439,7 +7439,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Kyrgyz Republic": {
+   "Kyrgyzstan": {
       "1960": 2172300,
       "1961": 2255900,
       "1962": 2333400,
@@ -7687,7 +7687,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Korea, Rep.": {
+   "South Korea": {
       "1960": 25012374,
       "1961": 25765673,
       "1962": 26513030,
@@ -7873,7 +7873,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Lao PDR": {
+   "Laos": {
       "1960": 2120896,
       "1961": 2170343,
       "1962": 2221122,
@@ -9609,7 +9609,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Macedonia, FYR": {
+   "Macedonia": {
       "1960": 1488667,
       "1961": 1507654,
       "1962": 1527111,
@@ -11841,7 +11841,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Korea, Dem. People�s Rep.": {
+   "North Korea": {
       "1960": 11424176,
       "1961": 11665595,
       "1962": 11871712,
@@ -12027,7 +12027,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "West Bank and Gaza": {
+   "Palestine": {
       "1960": null,
       "1961": null,
       "1962": null,
@@ -12399,7 +12399,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Russian Federation": {
+   "Russia": {
       "1960": 119897000,
       "1961": 121236000,
       "1962": 122591000,
@@ -12833,7 +12833,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Solomon Islands": {
+   "Solomon Is.": {
       "1960": 117866,
       "1961": 121396,
       "1962": 125064,
@@ -13267,7 +13267,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "South Sudan": {
+   "S. Sudan": {
       "1960": 2955152,
       "1961": 3011110,
       "1962": 3069913,
@@ -13577,7 +13577,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Slovak Republic": {
+   "Slovakia": {
       "1960": 4068095,
       "1961": 4191667,
       "1962": 4238188,
@@ -13949,7 +13949,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Syrian Arab Republic": {
+   "Syria": {
       "1960": 4573512,
       "1961": 4721896,
       "1962": 4875422,
@@ -15437,7 +15437,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "United States": {
+   "United States of America of America of America": {
       "1960": 180671000,
       "1961": 183691000,
       "1962": 186538000,
@@ -15623,7 +15623,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Venezuela, RB": {
+   "Venezuela": {
       "1960": 8146847,
       "1961": 8461685,
       "1962": 8790589,
@@ -16119,7 +16119,7 @@
       "Indicator Name": "Population, total",
       "Indicator Code": "SP.POP.TOTL"
    },
-   "Yemen, Rep.": {
+   "Yemen": {
       "1960": 5172135,
       "1961": 5260501,
       "1962": 5351799,

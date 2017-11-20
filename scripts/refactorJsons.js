@@ -38,8 +38,8 @@ readFiles('./src/data/')
             });
             if (newContent !== file.data) { // <- quite heavy if expression
                 fs.writeFile(`./src/data/${file.name}`, newContent, e => {
-                    if (e) throw e;
-                    console.log(`File ${file.name} saved!`);
+                    if (e) console.error(e);
+                    else console.log(`File ${file.name} saved!`);
                 });
             }
         });

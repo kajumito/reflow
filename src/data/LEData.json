@@ -1301,7 +1301,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Bahamas, The": {
+   "Bahamas": {
       "1960": "62,72904878",
       "1961": "63,0725122",
       "1962": "63,40802439",
@@ -1363,7 +1363,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Bosnia and Herzegovina": {
+   "Bosnia and Herz.": {
       "1960": "60,27073171",
       "1961": "60,93604878",
       "1962": "61,56290244",
@@ -1797,7 +1797,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Brunei Darussalam": {
+   "Brunei": {
       "1960": "62,50036585",
       "1961": "63,04895122",
       "1962": "63,57590244",
@@ -1983,7 +1983,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Central African Republic": {
+   "Central African Rep.": {
       "1960": "36,48263415",
       "1961": "36,89570732",
       "1962": "37,31878049",
@@ -2541,7 +2541,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Congo, Dem. Rep.": {
+   "Dem. Rep. Congo": {
       "1960": "41,01804878",
       "1961": "41,23353659",
       "1962": "41,4515122",
@@ -2603,7 +2603,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Congo, Rep.": {
+   "Congo": {
       "1960": "48,58112195",
       "1961": "49,23004878",
       "1962": "49,84395122",
@@ -3223,7 +3223,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Czech Republic": {
+   "Czechia": {
       "1960": "70,34878049",
       "1961": "70,51268293",
       "1962": "69,78682927",
@@ -3533,7 +3533,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Dominican Republic": {
+   "Dominican Rep.": {
       "1960": "51,84526829",
       "1961": "52,5782439",
       "1962": "53,2992439",
@@ -4029,7 +4029,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Egypt, Arab Rep.": {
+   "Egypt": {
       "1960": "48,01370732",
       "1961": "48,58158537",
       "1962": "49,1065122",
@@ -5207,7 +5207,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Gambia, The": {
+   "Gambia": {
       "1960": "32,04221951",
       "1961": "32,32563415",
       "1962": "32,66109756",
@@ -5331,7 +5331,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Equatorial Guinea": {
+   "Eq. Guinea": {
       "1960": "36,73304878",
       "1961": "37,0324878",
       "1962": "37,33241463",
@@ -6819,7 +6819,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Iran, Islamic Rep.": {
+   "Iran": {
       "1960": "44,9455122",
       "1961": "45,50895122",
       "1962": "46,06580488",
@@ -7439,7 +7439,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Kyrgyz Republic": {
+   "Kyrgyzstan": {
       "1960": "56,12807317",
       "1961": "56,56412195",
       "1962": "57,00265854",
@@ -7687,7 +7687,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Korea, Rep.": {
+   "South Korea": {
       "1960": "53,00180488",
       "1961": "53,73673171",
       "1962": "54,48509756",
@@ -7873,7 +7873,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Lao PDR": {
+   "Laos": {
       "1960": "43,20446341",
       "1961": "43,50704878",
       "1962": "43,80865854",
@@ -9609,7 +9609,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Macedonia, FYR": {
+   "Macedonia": {
       "1960": "60,62280488",
       "1961": "61,24939024",
       "1962": "61,86046341",
@@ -11841,7 +11841,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Korea, Dem. People�s Rep.": {
+   "North Korea": {
       "1960": "51,07717073",
       "1961": "51,4382439",
       "1962": "51,82531707",
@@ -12027,7 +12027,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "West Bank and Gaza": {
+   "Palestine": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -12399,7 +12399,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Russian Federation": {
+   "Russia": {
       "1960": "66,05529268",
       "1961": "66,59702439",
       "1962": "67,02141463",
@@ -12833,7 +12833,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Solomon Islands": {
+   "Solomon Is.": {
       "1960": "49,38170732",
       "1961": "49,88170732",
       "1962": "50,38170732",
@@ -13267,7 +13267,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "South Sudan": {
+   "S. Sudan": {
       "1960": "31,72270732",
       "1961": "32,14865854",
       "1962": "32,57160976",
@@ -13577,7 +13577,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Slovak Republic": {
+   "Slovakia": {
       "1960": "69,92365854",
       "1961": "70,25085366",
       "1962": "70,47229268",
@@ -13949,7 +13949,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Syrian Arab Republic": {
+   "Syria": {
       "1960": "51,99685366",
       "1961": "52,59504878",
       "1962": "53,20278049",
@@ -15437,7 +15437,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "United States": {
+   "United States of America of America of America": {
       "1960": "69,77073171",
       "1961": "70,27073171",
       "1962": "70,1195122",
@@ -15623,7 +15623,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Venezuela, RB": {
+   "Venezuela": {
       "1960": "59,28512195",
       "1961": "59,86256098",
       "1962": "60,43031707",
@@ -16119,7 +16119,7 @@
       "Indicator Name": "Life expectancy at birth, total (years)",
       "Indicator Code": "SP.DYN.LE00.IN"
    },
-   "Yemen, Rep.": {
+   "Yemen": {
       "1960": "34,36380488",
       "1961": "34,4732439",
       "1962": "34,73956098",

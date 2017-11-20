@@ -58,12 +58,12 @@ const drawMap = (countries, traffic) => {
     processCoordinates(traffic);
 
 //todo: animation intensity should depend on traffic amount.
-let i = 0;
-setInterval(_ => {
-  if (i > window.map.allCoordinates.length - 1) i = 0;
-  moveItemAlongPath(window.map.allCoordinates[i], svg);
-  i++;
-  }, 300);
+//let i = 0;
+//setInterval(_ => {
+//  if (i > window.map.allCoordinates.length - 1) i = 0;
+//  moveItemAlongPath(window.map.allCoordinates[i], svg);
+//  i++;
+//  }, 300);
 }
 
 export default () => {

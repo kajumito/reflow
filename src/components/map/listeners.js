@@ -20,7 +20,6 @@ export default () => {
      * When year changes, traffic needs to be redrawn.
      */
     window.addEventListener('yearChanged', (e) => {
-        console.log('yearChanged event triggered!');
         processCoordinates(jsonFinland);
     }, false);
 
@@ -28,8 +27,8 @@ export default () => {
 
     //Selects a country from the map.
     countriesEl.addEventListener('click', (e) => {
-        console.log('click event triggered!');
-        console.log(e.target.id);
+        //console.log('click event triggered!');
+        //console.log(e.target.id);
         countriesEl.childNodes.forEach((el) => {
             el.classList.remove('target-country');
         })

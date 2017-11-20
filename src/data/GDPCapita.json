@@ -1301,7 +1301,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Bahamas, The": {
+   "Bahamas": {
       "1960": "1550,324315",
       "1961": "1651,475477",
       "1962": "1752,970293",
@@ -1363,7 +1363,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Bosnia and Herzegovina": {
+   "Bosnia and Herz.": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -1797,7 +1797,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Brunei Darussalam": {
+   "Brunei": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -1983,7 +1983,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Central African Republic": {
+   "Central African Rep.": {
       "1960": "74,59594425",
       "1961": "80,52080199",
       "1962": "79,96779577",
@@ -2541,7 +2541,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Congo, Dem. Rep.": {
+   "Dem. Rep. Congo": {
       "1960": "220,3140631",
       "1961": "197,3909477",
       "1962": "235,6324068",
@@ -2603,7 +2603,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Congo, Rep.": {
+   "Congo": {
       "1960": "127,0047459",
       "1961": "142,5375164",
       "1962": "152,4512126",
@@ -3223,7 +3223,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Czech Republic": {
+   "Czechia": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -3533,7 +3533,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Dominican Republic": {
+   "Dominican Rep.": {
       "1960": "204,1260251",
       "1961": "192,0266541",
       "1962": "234,0343478",
@@ -4029,7 +4029,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Egypt, Arab Rep.": {
+   "Egypt": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -5207,7 +5207,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Gambia, The": {
+   "Gambia": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -5331,7 +5331,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Equatorial Guinea": {
+   "Eq. Guinea": {
       "1960": "",
       "1961": "",
       "1962": "34,74142752",
@@ -6819,7 +6819,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Iran, Islamic Rep.": {
+   "Iran": {
       "1960": "191,6808775",
       "1961": "196,9246788",
       "1962": "203,4363115",
@@ -7439,7 +7439,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Kyrgyz Republic": {
+   "Kyrgyzstan": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -7687,7 +7687,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Korea, Rep.": {
+   "South Korea": {
       "1960": "158,2366362",
       "1961": "93,81620864",
       "1962": "106,133999",
@@ -7873,7 +7873,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Lao PDR": {
+   "Laos": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -9609,7 +9609,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Macedonia, FYR": {
+   "Macedonia": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -11841,7 +11841,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Korea, Dem. People�s Rep.": {
+   "North Korea": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -12027,7 +12027,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "West Bank and Gaza": {
+   "Palestine": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -12399,7 +12399,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Russian Federation": {
+   "Russia": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -12833,7 +12833,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Solomon Islands": {
+   "Solomon Is.": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -13267,7 +13267,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "South Sudan": {
+   "S. Sudan": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -13577,7 +13577,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Slovak Republic": {
+   "Slovakia": {
       "1960": "",
       "1961": "",
       "1962": "",
@@ -13949,7 +13949,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Syrian Arab Republic": {
+   "Syria": {
       "1960": "187,5373743",
       "1961": "200,1833569",
       "1962": "227,7886639",
@@ -15437,7 +15437,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "United States": {
+   "United States of America of America of America": {
       "1960": "3007,123445",
       "1961": "3066,562869",
       "1962": "3243,843078",
@@ -15623,7 +15623,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Venezuela, RB": {
+   "Venezuela": {
       "1960": "1072,431997",
       "1961": "1070,486695",
       "1962": "1140,082877",
@@ -16119,7 +16119,7 @@
       "Indicator Name": "GDP per capita (current US$)",
       "Indicator Code": "NY.GDP.PCAP.CD"
    },
-   "Yemen, Rep.": {
+   "Yemen": {
       "1960": "",
       "1961": "",
       "1962": "",

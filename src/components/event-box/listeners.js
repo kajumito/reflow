@@ -9,10 +9,9 @@ export default () => {
      * When year changes, event box must be updated.
      */
     window.addEventListener('yearChanged', (e) => {
-        console.log('yearChanged event triggered!');
         //kissa();
         tulostaSodat();
-        
+
     }, false);
 
 }

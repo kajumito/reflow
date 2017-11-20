@@ -1,5 +1,6 @@
 import axios from 'axios';
 import * as R from 'ramda';
+import slugify from 'slugify';
 
 import listeners from './listeners';
 
@@ -12,11 +13,12 @@ export const outputYearEl = document.querySelector('#outputYear');
  */
 const sliderInit = async () => {
     if (!sliderEl) return;
-    const dataResponse = await axios.get(`/data/${window.country.toLowerCase()}.json`);
+    const slugOptions = {lower: true, remove: /[$*_+~.,()'"!\-:@]/g};
+    const dataResponse = await axios.get(`/data/${slugify(window.country, slugOptions)}.json`);
 
     if (dataResponse.status === 200) {
         const {data} = dataResponse;
-        const years = R.flatten(R.map((obj) => R.keys(obj)[0], data));
+        const years = R.keys(data);
         window.year = sliderEl.value = outputYearEl.value = years[0];
         sliderEl.setAttribute('min', years[0]);
         sliderEl.setAttribute('max', years[years.length - 1]);

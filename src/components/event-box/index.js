@@ -11,20 +11,20 @@ export const tulostaSodat = () => {
 
     var year = window.year;
     var sota;
-    console.log(year);
+    //console.log(year);
 
     for (let i in sodat) {
 
         if (sodat[i].start < year && year < sodat[i].stop) {
             sota = sodat[i];
-            console.log(sota);
+            //console.log(sota);
         }
     }
 }
 
 const kissa = () => {
 
-    console.log("KISSA");
+    //console.log("KISSA");
 }
 
 export default () => {

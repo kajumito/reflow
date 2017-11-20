@@ -20,29 +20,32 @@ export const drawArcs = c => {
  * Saves current year's traffic coordinates to a global variable
  */
 export const processCoordinates = (traffic) => {
-    if (window.map.allCoordinates.length) {
-        window.map.allCoordinates = [];
-        selectAll('.arc').remove();
-    }
+  if (window.map.allCoordinates.length) {
+      window.map.allCoordinates = [];
+      selectAll('.arc').remove();
+  }
 
-  traffic.map(years => {
-    if (years[window.year]) {
-      years[window.year].map(({country}) => {
-        const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
-        const toCountry = R.find(R.pathEq(['properties', 'NAME'], 'Finland'))(window.map.geoData);
-        const coordinates = [
-          fromCountry.centroid,
-          toCountry.centroid
-        ];
-        window.map.allCoordinates.push(coordinates);
+  if (traffic[window.year]) {
+    traffic[window.year].map(({country}) => {
+      if (!country || country === 'Various/Unknown') return true;
+      const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
+      const toCountry = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
+      console.log(country, toCountry);
+      const coordinates = [
+        fromCountry.centroid,
+        toCountry.centroid
+      ];
+      window.map.allCoordinates.push(coordinates);
+      // this is unnessessary... here just for demo purpose
+      let line = svg.append('path')
+        .datum(coordinates)
+        .attr('d', drawArcs)
+        .attr('class', 'arc')
+        .exit();
+    });
+  };
+};
 
-        // this is unnessessary... here just for demo purpose
-        let line = svg.append('path')
-          .datum(coordinates)
-          .attr('d', drawArcs)
-          .attr('class', 'arc')
-          .exit();
-      });
-    }
-  });
+export const isValidCountry = (name) => {
+  //
 }
