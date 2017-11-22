@@ -2,7 +2,7 @@
  * Component-related event-listeners are grouped in this file.
  * This improves project maintainability.
  */
-import { tulostaSodat, kissa } from './index';
+import { listWars, kissa } from './index';
 
 export default () => {
     /**
@@ -10,7 +10,7 @@ export default () => {
      */
     window.addEventListener('yearChanged', (e) => {
         //kissa();
-        tulostaSodat();
+        listWars();
 
     }, false);
 

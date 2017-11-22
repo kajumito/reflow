@@ -28,7 +28,8 @@ aside.info-container {
 			list-style-type: none;
 		}
 
-		li#event-box {
+		//li#event-box {
+		ul#event-box{
 			margin-bottom: 20px;
 			border: 1px solid $font-light-color;
 			padding: 10px;

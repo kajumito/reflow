@@ -1,69 +1,72 @@
 <%
 var pkg = require('../package.json');
 %>
-<!doctype html>
+  <!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+  <html lang="en">
 
-  <title><%= pkg.name %></title>
-  <meta name="description" content="<%= pkg.description %>">
-  <meta name="author" content="<%= pkg.author %>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
 
-  <link rel="stylesheet" href="styles/index.css?v=<%= pkg.version %>">
+    <title>
+      <%= pkg.name %>
+    </title>
+    <meta name="description" content="<%= pkg.description %>">
+    <meta name="author" content="<%= pkg.author %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--[if lt IE 9]>
+    <link rel="stylesheet" href="styles/index.css?v=<%= pkg.version %>">
+
+    <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
-</head>
+  </head>
 
-<body>
-  <header>
+  <body>
+    <header>
       <h1 class="title">Refugee flow visualization</h1>
       <a href="#" class="menu-link">About</a>
-  </header>
+    </header>
 
-  <div class="flex-container">
-    <aside class="info-container">
-      <div id="country-info">
-        <h2 class="side-title">Finland</h2>
-        <ul id="info-section">
-          <li id="population">Population: 5,4mil.</li>
-          <li id="gdp">GDP: 235,8mil.</li>
-          <li id="gdp-capita">GDP (capita): 43,1k</li>
-          <li id="life-expentancy">Life expentancy: 81.4</li>
-        </ul>
-      </div>
-      <div id="events-info">
-        <h2 class="side-title">Events</h2>
-        <ul id="event-section">
-          <li id="event-desc">What happened in the world at this time</li>
-          <li id="event-box">
-            <h4 class="event-heading">Black Dragon Fire</h4>
-            <p class="event-excerpt">The Black Dragon Fire was a massive wildfire that occurred in China and the Soviet Union during May 1987.</p>
-            <span><a href="#" class="event-link">Learn more</a></span>
-          </li>
-          <li id="event-box">
-            <h4 class="event-heading">Black Dragon Fire</h4>
-            <p class="event-excerpt">The Black Dragon Fire was a massive wildfire that occurred in China and the Soviet Union during May 1987.</p>
-            <span><a href="#" class="event-link">Learn more</a></span>
-          </li>
-        </ul>
-      </div>
-    </aside>
+    <div class="flex-container">
+      <aside class="info-container">
+        <div id="country-info">
+          <h2 class="side-title">Finland</h2>
+          <ul id="info-section">
+            <li id="population">Population: 5,4mil.</li>
+            <li id="gdp">GDP: 235,8mil.</li>
+            <li id="gdp-capita">GDP (capita): 43,1k</li>
+            <li id="life-expentancy">Life expentancy: 81.4</li>
+          </ul>
+        </div>
+        <div id="events-info">
+          <h2 class="side-title">Events</h2>
+          <ul id="event-section">
+            <li id="event-desc">What happened in the world at this time</li>
+            <ul id="event-box">
+            </ul>
+            <li id="event-box2">
+              <h4 class="event-heading">Black Dragon Fire</h4>
+              <p class="event-excerpt">The Black Dragon Fire was a massive wildfire that occurred in China and the Soviet Union during May 1987.</p>
+              <span>
+                <a href="#" class="event-link">Learn more</a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-    <main class="map-container">
+      <main class="map-container">
         <div id="map"></div>
         <div id="slider">
           <h3>Current year</h3>
           <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016">
           <output name="outputYear" id="outputYear">1983</output>
         </div>
-    </main>
-  </div>
+      </main>
+    </div>
 
-  <script src="bundle.js?v=<%= pkg.version %>"></script>
-</body>
-</html>
+    <script src="bundle.js?v=<%= pkg.version %>"></script>
+  </body>
+
+  </html>
