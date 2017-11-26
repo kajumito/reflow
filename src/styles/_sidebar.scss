@@ -29,26 +29,32 @@ aside.info-container {
 		}
 
 		//li#event-box {
-		ul#event-box{
+		li#event-box{
 			margin-bottom: 20px;
 			border: 1px solid $font-light-color;
 			padding: 10px;
 			color: $font-main-color;
 			overflow: auto;
 
-			h4.event-heading {
+			h4.war-name {
 				margin-bottom: 10px;
+				a {
+					text-decoration: none;
+					color: $font-main-color;
+				}
 			}
 
-			p.event-excerpt {
+			p {
+				font-weight: 800;
 				font-size: 14px;
 			}
 
-			a.event-link {
-				float:right;
-				font-size: 12px;
-				text-decoration: none;
-				color: $font-secondary-color;
+			p.start-year {
+				float: left;
+			}
+
+			p.end-year {
+				float: right;
 			}
 		}
 	}

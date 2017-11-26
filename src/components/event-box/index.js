@@ -12,16 +12,16 @@ export const listWars = () => {
     var year = window.year;
     var country = window.country;
     var war;
-    var warCount =5;
-    var eventBox = document.getElementById("event-box");
+    var warCount = 3;
+    var warsUl = document.getElementById("wars");
+    console.log("Mo");
 
-    //Delete all "li" elements from the eventBox
-    var liLista = document.querySelectorAll('#event-box li');
+    // //Delete all "li" elements from the eventBox
+    // var liLista = document.querySelectorAll('#event-box li');
 
-    if (liLista.length != 0) {
-
-        for (var i = 0; li = liLista[i]; i++) {
-            li.parentNode.removeChild(li);
+    if (warsUl.childElementCount != 0) {
+        while (warsUl.firstChild) {
+            warsUl.removeChild(warsUl.firstChild);
         }
     }
 
@@ -36,22 +36,32 @@ export const listWars = () => {
 
         if (wars[i].start >= year) {
         //if (wars[i].start < year && year < wars[i].stop) {
+            warsUl = document.getElementById("wars");
+            if (warsUl.childElementCount >= warCount) break;
 
-            liLista = document.querySelectorAll('#event-box li');
+            var eventBox = document.createElement("li");
+            eventBox.id = "event-box";
+            warsUl.appendChild(eventBox);
 
-            if (liLista.length >= warCount) break;
+            var warName = document.createElement("h4");
+            warName.classList.add("war-name");
+            var warLink = document.createElement("a");
+            warLink.href = wars[i].linkki;
+            var warTitle = document.createTextNode(wars[i].name);
+            warLink.appendChild(warTitle);
+            warName.appendChild(warLink);
 
-            war = wars[i];
+            var startYear = document.createElement("p");
+            startYear.classList.add("start-year");
+            startYear.appendChild(document.createTextNode("Start: " + wars[i].start));
 
-            var li = document.createElement("li");
-            var link = document.createElement("a");
-            var linkText = document.createTextNode(war.name);
+            var endYear = document.createElement("p");
+            endYear.classList.add("end-year");
+            endYear.appendChild(document.createTextNode("End: " + wars[i].stop));
 
-            link.appendChild(linkText);
-            link.title = war.name;
-            link.href = war.linkki;
-            li.appendChild(link);
-            eventBox.appendChild(li);
+            eventBox.appendChild(warName);
+            eventBox.appendChild(startYear);
+            eventBox.appendChild(endYear);
         }
     }   
 }

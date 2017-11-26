@@ -24,6 +24,9 @@ export default () => {
     }, false);
 
     const countriesEl = document.querySelector('.countries');
+    countriesEl.childNodes.forEach((el) => {
+        if(el.id === window.country) el.classList.add('target-country');
+    });
 
     //Selects a country from the map.
     countriesEl.addEventListener('click', (e) => {
@@ -31,10 +34,10 @@ export default () => {
         //console.log(e.target.id);
         countriesEl.childNodes.forEach((el) => {
             el.classList.remove('target-country');
-        })
+        });
         e.target.classList.add('target-country');
         window.country = e.target.id;
-    })
+    });
 
 
     /**
