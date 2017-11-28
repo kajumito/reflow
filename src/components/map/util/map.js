@@ -22,19 +22,22 @@ export const drawArcs = c => {
 export const processCoordinates = (traffic) => {
   if (window.map.allCoordinates.length) {
       window.map.allCoordinates = [];
+      window.map.fromCountryList = [];
       selectAll('.arc').remove();
   }
+
 
   if (traffic[window.year]) {
     traffic[window.year].map(({country}) => {
       if (!country || country === 'Various/Unknown' || country === 'Stateless') return true;
       const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
       const toCountry = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
-      console.log(country, toCountry);
+      //console.log(country,toCountry);
       const coordinates = [
         fromCountry.centroid,
         toCountry.centroid
       ];
+      window.map.fromCountryList.push(country);
       window.map.allCoordinates.push(coordinates);
       // this is unnessessary... here just for demo purpose
       let line = svg.append('path')

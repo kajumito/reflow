@@ -12,7 +12,7 @@ import {
 import { select, selectAll } from 'd3-selection';
 import { geoCentroid } from 'd3-geo';
 import { processCoordinates } from './util/map';
-import { allCoordinates } from '../index';
+import { allCoordinates, fromCountryList } from '../index';
 import jsonFinland from '../../data/finland.json';
 
 export default () => {

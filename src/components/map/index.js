@@ -21,6 +21,7 @@ import { drawArcs, processCoordinates } from './util/map';
 let groupCountries = svg.append('g');
 let groupCentroids = svg.append('g');
 export let allCoordinates = [];
+export let fromCountryList=[];
 
 
 const drawMap = (countries, traffic) => {
