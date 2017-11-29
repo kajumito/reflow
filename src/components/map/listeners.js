@@ -38,12 +38,6 @@ export default () => {
     const countriesEl = document.querySelector('.countries');
     // Selects a country from the map.
     countriesEl.addEventListener('click', (e) => {
-        //console.log('click event triggered!');
-        //console.log(e.target.id);
-        countriesEl.childNodes.forEach((el) => {
-            el.classList.remove('target-country');
-        });
-        e.target.classList.add('target-country');
         window.country = e.target.id;
         window.dispatchEvent(countryChanged);
     });
@@ -53,6 +47,11 @@ export default () => {
      */
     window.addEventListener('countryChanged', () => {
         localStorage.setItem('country', window.country);
+
+        countriesEl.childNodes.forEach((el) => {
+            el.classList.remove('target-country');
+        });
+        document.querySelector(`#${window.country}`).classList.add('target-country');
     });
 
 
