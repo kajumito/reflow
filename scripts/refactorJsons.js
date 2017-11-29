@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * This script replaces all occurances of country names to matching
  * names in dict in all json files in src/data -folder
@@ -29,10 +30,10 @@ const readFiles = (dir) => {
 
 readFiles('./src/data/')
     .then((response) => {
-        // Here's the magic
-        response.map(file => {
+    // Here's the magic
+        response.map((file) => {
             const regExp = new RegExp(Object.keys(replaceDict).join('|')
-                .replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$]/g, "\\$&"), 'ig');
+                .replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$]/g, '\\$&'), 'ig');
             const newContent = file.data.replace(regExp, match => {
                 console.log(`Replaced: "${match}" with "${replaceDict[match]}" in ${file.name}`);
                 return replaceDict[match];
@@ -43,6 +44,7 @@ readFiles('./src/data/')
                     else console.log(`File ${file.name} saved!`);
                 });
             }
+            return true;
         });
     }).catch(e => console.log(e));
 

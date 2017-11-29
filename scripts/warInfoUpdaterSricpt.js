@@ -1,3 +1,4 @@
+/* eslint-disable */
 //1. Install "npm install wiki-infobox"
 //2. Run from command line using "node warInfoUpdaterSricpt"
 //3. Remove "," and add "]" to the end of JSON
@@ -6,7 +7,7 @@ var infobox = require('wiki-infobox');
 var sodat = require('./SODATvanha.json');
 
 var fs = require('fs');
-fs.writeFile("SODAT.json", '[', function (err) {
+fs.writeFile('SODAT.json', '[', function (err) {
     if (err) {
         return console.log(err);
     }
@@ -48,16 +49,16 @@ for (let i = 0; i < sodat.length; i++) {
             }
 
             var sota = {
-                "start": sodat[i].start,
-                "stop": sodat[i].stop,
-                "name": sodat[i].name,
-                "link": sodat[i].linkki,
-                "victoriousParty": sodat[i].voittajat,
-                "defeatedParty": sodat[i].looserit,
-                "location": locationList
+                'start': sodat[i].start,
+                'stop': sodat[i].stop,
+                'name': sodat[i].name,
+                'link': sodat[i].linkki,
+                'victoriousParty': sodat[i].voittajat,
+                'defeatedParty': sodat[i].looserit,
+                'location': locationList
             };
 
-            fs.appendFile("SODAT.json", JSON.stringify(sota) + ',', function (err) {
+            fs.appendFile('SODAT.json', JSON.stringify(sota) + ',', function (err) {
                 if (err) {
                     return console.log(err);
                 }
@@ -69,7 +70,7 @@ for (let i = 0; i < sodat.length; i++) {
 
 function appendFileWithoutLocation(sotaIndex) {
 
-    fs.appendFile("SODAT.json", JSON.stringify(sodat[sotaIndex]) + ',', function (err) {
+    fs.appendFile('SODAT.json', JSON.stringify(sodat[sotaIndex]) + ',', function (err) {
         if (err) {
             return console.log(err);
         }
