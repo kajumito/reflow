@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * This script gets csv-file-path as argument,
  * and creates json files for each country, and saves them
@@ -24,11 +25,13 @@ const replaceDict = require('./replaceDict');
 const path = process.argv[2];
 if (path === undefined) {
     console.error(csvErr.message);
-    return;
+    process.exit(1);
 }
 
 /**
  * This is a long process, there is about 298 000 rows in the csv.
+ * By increasing workerNum it's possible to gain some performance boosts,
+ * but it's an experimental feature and might not always work properly.
  */
 const csvParser = csv({trim: true, workerNum: 1});
 let countryData = {};

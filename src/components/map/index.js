@@ -1,26 +1,26 @@
-import { scaleLinear } from 'd3-scale';
+//import { scaleLinear } from 'd3-scale';
 import { geoCentroid } from 'd3-geo';
-import { queue } from 'd3-queue';
 import * as topojson from 'topojson-client';
-import * as R from 'ramda';
-import gdpData from '../../data/GDPData.json';
+//import * as R from 'ramda';
+//import gdpData from '../../data/GDPData.json';
 
 import listeners from './listeners';
 import jsonWorldMap from './maps/world.json';
-import jsonFinland from '../../data/finland.json';
 import {
-  projection,
-  path,
-  svg
+    projection,
+    path,
+    svg
 } from './map-settings';
-import { moveItemAlongPath } from './util/animation';
-import { drawArcs, processCoordinates } from './util/map';
+//import { moveItemAlongPath } from './util/animation';
+import { processCoordinates, getRefugeeData } from './util/map';
+import { countryChanged } from './events';
 
 // Note that select is a dom-method!
 
 let groupCountries = svg.append('g');
 let groupCentroids = svg.append('g');
 export let allCoordinates = [];
+export let fromCountryList=[];
 
 
 const drawMap = (countries, traffic) => {
@@ -44,15 +44,15 @@ const drawMap = (countries, traffic) => {
 
     // draw centroids of countries
     groupCentroids.attr('class', 'centroids')
-       .selectAll('path.centroid')
-       .data(window.map.geoData)
-       .enter()
-       .append('circle')
-       .classed('centroid', true)
-       .attr('cx', d => d.centroid[0])
-       .attr('cy', d => d.centroid[1])
-       .attr('r', '2')
-       .exit();
+        .selectAll('path.centroid')
+        .data(window.map.geoData)
+        .enter()
+        .append('circle')
+        .classed('centroid', true)
+        .attr('cx', d => d.centroid[0])
+        .attr('cy', d => d.centroid[1])
+        .attr('r', '2')
+        .exit();
 
     // Save current year's traffic coordinates to a global variable
     processCoordinates(traffic);
@@ -64,25 +64,29 @@ const drawMap = (countries, traffic) => {
 //  moveItemAlongPath(window.map.allCoordinates[i], svg);
 //  i++;
 //  }, 300);
-}
+};
 
-export default () => {
-  drawMap(jsonWorldMap, jsonFinland);
-  listeners();
+export default async () => {
+    try {
+        const trafficPromise = await getRefugeeData();
+        drawMap(jsonWorldMap, trafficPromise);
+    } catch (error) {
+        console.error(error);
+    }
+    listeners();
 
+    // Init target-country class from window.country
+    const countriesEl = document.querySelector('.countries');
+    countriesEl.childNodes.forEach((el) => {
+        if(el.id === window.country) el.classList.add('target-country');
+    });
 
-  //const year = window.year;
-  //const yearData = R.find(R.propEq('countryName', window.country), testidataa)['1994'];
-  //console.log(yearData);
-
-
-  //let gdptest = Object.keys(gdpData).map((key) => {
-  //  const countryCodeObj = {'Country Name': key};
-  //  const row = {...countryCodeObj, ...gdpData[key]};
-  //  return row;
-  //});
-  //console.log(JSON.stringify(gdptest));
-
-}
+    // Init selected country from localStorage if set
+    const savedCountry = localStorage.getItem('country');
+    if (savedCountry) {
+        window.country = savedCountry;
+        window.dispatchEvent(countryChanged);
+    }
+};
 
 
