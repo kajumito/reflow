@@ -19,13 +19,24 @@ const sliderInit = async () => {
     if (dataResponse.status === 200) {
         const {data} = dataResponse;
         const years = R.keys(data);
-        window.year = sliderEl.value = outputYearEl.value = years[0];
+        let cursorYear = years[0];
+
+        years.some((year) => {
+            const cursor = R.find(R.propSatisfies(c => c !== 'Various/Unknown', 'country'))(data[year]);
+            if (cursor) {
+                cursorYear = year;
+                return true;
+            }
+        });
+
+        window.year = sliderEl.value = outputYearEl.value = cursorYear ? cursorYear : years[0];
         sliderEl.setAttribute('min', years[0]);
         sliderEl.setAttribute('max', years[years.length - 1]);
+        sliderEl.value = cursorYear;
     }
 };
 
-export default () => {
-    sliderInit();
+export default async () => {
+    await sliderInit();
     listeners();
 };

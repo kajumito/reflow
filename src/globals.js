@@ -6,6 +6,7 @@ export default () => {
     window.country = 'Finland';
     window.map.allCoordinates = [];
     window.map.fromCountryList = [];
+    window.map.geoData = undefined;
     window.additionalCountries = {
         to: '',
         year: '',

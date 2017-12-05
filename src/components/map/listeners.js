@@ -9,6 +9,7 @@ import {
     config as mapConfig
 } from './map-settings';
 import { selectAll } from 'd3-selection';
+import * as R from 'ramda';
 import { geoCentroid } from 'd3-geo';
 import { processCoordinates } from './util/map';
 //import { allCoordinates, fromCountryList } from '../index';
@@ -52,7 +53,16 @@ export default () => {
         countriesEl.childNodes.forEach((el) => {
             el.classList.remove('target-country');
         });
-        document.querySelector(`#${window.country}`).classList.add('target-country');
+
+        // Country name migth sometimes be a bad id because of spaces and special characters
+        // so use country-code as backup
+        const countryObj = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
+        try {
+            document.querySelector(`#${window.country}`).classList.add('target-country');
+        } catch (e) {
+            document.querySelector(`g.countries path[country-code='${countryObj.properties.ADM0_A3}']`)
+                .classList.add('target-country');
+        } 
 
         // reprocess coordinates
         try {
