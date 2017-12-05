@@ -12,6 +12,7 @@ export default () => {
      * Change the year when slider changes
      */
     sliderEl.addEventListener('input', () => {
+        if (sliderEl.value % 1 !== 0) return;
         outputYearEl.value = sliderEl.value;
         window.year = sliderEl.value;
         window.dispatchEvent(yearChanged);

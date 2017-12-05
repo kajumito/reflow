@@ -56,10 +56,10 @@ export default () => {
 
         // Country name migth sometimes be a bad id because of spaces and special characters
         // so use country-code as backup
-        const countryObj = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
         try {
             document.querySelector(`#${window.country}`).classList.add('target-country');
         } catch (e) {
+            const countryObj = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
             document.querySelector(`g.countries path[country-code='${countryObj.properties.ADM0_A3}']`)
                 .classList.add('target-country');
         } 

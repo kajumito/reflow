@@ -3,6 +3,7 @@ import * as R from 'ramda';
 import slugify from 'slugify';
 
 import listeners from './listeners';
+import { yearChanged } from './events';
 
 // dom-elements
 export const sliderEl = document.querySelector('#inputYear');
@@ -33,6 +34,7 @@ const sliderInit = async () => {
         sliderEl.setAttribute('min', years[0]);
         sliderEl.setAttribute('max', years[years.length - 1]);
         sliderEl.value = cursorYear;
+        window.dispatchEvent(yearChanged);
     }
 };
 
