@@ -43,16 +43,16 @@ const drawMap = (countries, traffic) => {
         .exit();
 
     // draw centroids of countries
-    groupCentroids.attr('class', 'centroids')
-        .selectAll('path.centroid')
-        .data(window.map.geoData)
-        .enter()
-        .append('circle')
-        .classed('centroid', true)
-        .attr('cx', d => d.centroid[0])
-        .attr('cy', d => d.centroid[1])
-        .attr('r', '2')
-        .exit();
+    //groupCentroids.attr('class', 'centroids')
+    //    .selectAll('path.centroid')
+    //    .data(window.map.geoData)
+    //    .enter()
+    //    .append('circle')
+    //    .classed('centroid', true)
+    //    .attr('cx', d => d.centroid[0])
+    //    .attr('cy', d => d.centroid[1])
+    //    .attr('r', '2')
+    //    .exit();
 
     // Save current year's traffic coordinates to a global variable
     processCoordinates(traffic);

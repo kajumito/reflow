@@ -42,6 +42,7 @@
         */
         fill: none;
         animation: dash 3s linear infinite;
+        pointer-events: none;
     }
   
     @keyframes dash {
