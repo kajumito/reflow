@@ -17,4 +17,11 @@ export default () => {
         window.year = sliderEl.value;
         window.dispatchEvent(yearChanged);
     });
+
+    sliderEl.addEventListener('click', () => {
+        const val = Math.floor(sliderEl.value);
+        outputYearEl.value = val;
+        window.year = val;
+        window.dispatchEvent(yearChanged);
+    });
 };
