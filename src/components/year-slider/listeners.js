@@ -11,9 +11,9 @@ export default () => {
     /**
      * Change the year when slider changes
      */
-    sliderEl.addEventListener('input', (e) => {
+    sliderEl.addEventListener('input', () => {
         outputYearEl.value = sliderEl.value;
         window.year = sliderEl.value;
         window.dispatchEvent(yearChanged);
     });
-}
+};

@@ -23,9 +23,9 @@ const sliderInit = async () => {
         sliderEl.setAttribute('min', years[0]);
         sliderEl.setAttribute('max', years[years.length - 1]);
     }
-}
+};
 
 export default () => {
     sliderInit();
     listeners();
-}
+};

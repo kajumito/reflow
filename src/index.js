@@ -8,7 +8,7 @@ function init() {
     components.MapComponent();
     components.SliderComponent();
     components.EventBox();
-	components.CountryInfo();
+    components.CountryInfo();
 }
 
 document.addEventListener('DOMContentLoaded', init, false);

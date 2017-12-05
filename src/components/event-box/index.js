@@ -1,6 +1,5 @@
 import listeners from './listeners';
 import wars from '../../data/SODAT.json';
-import { event } from 'd3-selection';
 
 
 /**
@@ -11,9 +10,9 @@ export const listWars = () => {
     var year = window.year;
     var country = window.country;
     var countryList = window.map.fromCountryList;
-    var war;
+    // var war;
     var warCount = 3;
-    var warsUl = document.getElementById("wars");
+    var warsUl = document.getElementById('wars');
 
     countryList.push(country);
 
@@ -65,44 +64,38 @@ export const listWars = () => {
 
     function addWarToBox(warIndex) {
 
-        warsUl = document.getElementById("wars");
+        warsUl = document.getElementById('wars');
         if (warsUl.childElementCount >= warCount)
             return;
 
-        var eventBox = document.createElement("li");
-        eventBox.id = "event-box";
+        var eventBox = document.createElement('li');
+        eventBox.id = 'event-box';
         warsUl.appendChild(eventBox);
 
-        var warName = document.createElement("h4");
-        warName.classList.add("war-name");
-        var warLink = document.createElement("a");
+        var warName = document.createElement('h4');
+        warName.classList.add('war-name');
+        var warLink = document.createElement('a');
         warLink.href = wars[warIndex].linkki;
         var warTitle = document.createTextNode(wars[warIndex].name);
         warLink.appendChild(warTitle);
         warName.appendChild(warLink);
 
-        var startYear = document.createElement("p");
-        startYear.classList.add("start-year");
-        startYear.appendChild(document.createTextNode("Start: " + wars[warIndex].start));
+        var startYear = document.createElement('p');
+        startYear.classList.add('start-year');
+        startYear.appendChild(document.createTextNode('Start: ' + wars[warIndex].start));
 
-        var endYear = document.createElement("p");
-        endYear.classList.add("end-year");
-        endYear.appendChild(document.createTextNode("End: " + wars[warIndex].stop));
+        var endYear = document.createElement('p');
+        endYear.classList.add('end-year');
+        endYear.appendChild(document.createTextNode('End: ' + wars[warIndex].stop));
 
         eventBox.appendChild(warName);
         eventBox.appendChild(startYear);
         eventBox.appendChild(endYear);
     }
-}
-
-
-const kissa = () => {
-
-    //console.log("KISSA");
-}
+};
 
 export default () => {
     listWars();
     listeners();
     //kissa();
-}
+};

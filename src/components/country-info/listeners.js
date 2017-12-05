@@ -6,10 +6,10 @@ import {printCountryData} from './index';
 
 export default () => {
 
-    window.addEventListener('yearChanged', (e) => {
+    window.addEventListener('yearChanged', () => {
         //console.log('yearChanged event triggered!');
         printCountryData();
 
     }, false);
 
-}
+};
