@@ -7,8 +7,14 @@ import {printCountryData} from './index';
 export default () => {
 
     window.addEventListener('yearChanged', () => {
-        //console.log('yearChanged event triggered!');
-        printCountryData();
+      //console.log('yearChanged event triggered!');
+      printCountryData();
+
+    }, false);
+
+    window.addEventListener('countryChanged', () => {
+	    //console.log('yearChanged event triggered!');
+	    printCountryData();
 
     }, false);
 

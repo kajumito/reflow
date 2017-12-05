@@ -28,13 +28,23 @@ html {
             height: calc(100% - 100px);
 
             .info-container {
-                width: 15%;
+                width: 20%;
                 background-color: $tab-color;
                 box-shadow: 2px 5px 5px rgba(0,0,0,0.2);
             }
 
             .map-container {
-                width: 85%;
+                width: 80%;
+            }
+
+            @media screen and (max-width: $break-width) {
+              .info-container {
+                display:none;
+              }
+
+              .map-container {
+                width: 100%;
+              }
             }
         }
 	}
