@@ -16,13 +16,14 @@ import { countryChanged } from './events';
 // import jsonFinland from '../../data/finland.json';
 import { getRefugeeData } from './util/map';
 
+
 export default () => {
     /**
      * When year changes, traffic needs to be redrawn. This also means that there's
      * xhr req for traffic data on every "yearChanged" event, but it shouldn't be
      * an issue because browser will cache it anyway.
      */
-    window.addEventListener('yearChanged', async (e) => {
+    window.addEventListener('yearChanged', async () => {
         try {
             const dataPromise = await getRefugeeData();
             processCoordinates(dataPromise);
@@ -45,13 +46,21 @@ export default () => {
     /**
      * Save country to localStorage when changed
      */
-    window.addEventListener('countryChanged', () => {
+    window.addEventListener('countryChanged', async () => {
         localStorage.setItem('country', window.country);
 
         countriesEl.childNodes.forEach((el) => {
             el.classList.remove('target-country');
         });
         document.querySelector(`#${window.country}`).classList.add('target-country');
+
+        // reprocess coordinates
+        try {
+            const dataPromise = await getRefugeeData();
+            processCoordinates(dataPromise);
+        } catch (error) {
+            console.error('Couln\'t fetch refugee data on country change: ', error);
+        }
     });
 
 

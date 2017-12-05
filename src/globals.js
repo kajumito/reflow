@@ -5,5 +5,10 @@ export default () => {
     window.year = '1971';
     window.country = 'Finland';
     window.map.allCoordinates = [];
-    window.map.fromCountryList =[];
-}
+    window.map.fromCountryList = [];
+    window.additionalCountries = {
+        to: '',
+        year: '',
+        countries: []
+    };
+};

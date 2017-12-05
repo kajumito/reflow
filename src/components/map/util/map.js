@@ -3,6 +3,8 @@ import { selectAll } from 'd3-selection';
 import axios from 'axios';
 import slugify from 'slugify';
 import { svg } from '../map-settings';
+import { additionalCountryAdded } from '../events';
+
 
 /**
  * @param  {Array} c Coordinate
@@ -30,11 +32,31 @@ export const processCoordinates = (traffic) => {
 
 
     if (traffic[window.year]) {
-        traffic[window.year].map(({country}) => {
-            if (!country || country === 'Various/Unknown' || country === 'Stateless') return true;
+        traffic[window.year].map((countryObject) => {
+            const {country} = countryObject;
+            if (!country
+                || country === 'Various/Unknown'
+                || country === 'Stateless') return true;
+
+            // If we wish to give some presentation of those countries that we haven't
+            // got any map-data, we can listen additionalCountryAdded-event and grab
+            // those countries from window.additionalCountries
+            if (!isValidCountry(country)) {
+                const isNew = window.additionalCountries.to != window.country
+                    ||  window.additionalCountries.year != window.year; 
+                if (isNew) {
+                    window.additionalCountries.to = window.country;
+                    window.additionalCountries.year = window.year;
+                    window.additionalCountries.countries = [countryObject];
+                } else {
+                    window.additionalCountries.countries.push(countryObject);
+                }
+                window.dispatchEvent(additionalCountryAdded);
+                return true;
+            }
+
             const fromCountry = R.find(R.pathEq(['properties', 'NAME'], country))(window.map.geoData);
             const toCountry = R.find(R.pathEq(['properties', 'NAME'], window.country))(window.map.geoData);
-            console.log(country,toCountry);
             const coordinates = [
                 fromCountry.centroid,
                 toCountry.centroid
@@ -42,7 +64,7 @@ export const processCoordinates = (traffic) => {
             window.map.fromCountryList.push(country);
             window.map.allCoordinates.push(coordinates);
             // this is unnessessary... here just for demo purpose
-            let line = svg.append('path')
+            svg.append('path')
                 .datum(coordinates)
                 .attr('d', drawArcs)
                 .attr('class', 'arc')
@@ -60,5 +82,5 @@ export const getRefugeeData = async () => {
 };
 
 export const isValidCountry = (name) => {
-    //
+    return R.find(R.pathEq(['properties', 'NAME'], name))(window.map.geoData) !== undefined;
 };

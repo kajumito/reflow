@@ -9,3 +9,4 @@ const createEvent = (name) => {
 };
 
 export const countryChanged = createEvent('countryChanged');
+export const additionalCountryAdded = createEvent('additionalCountryAdded');
