@@ -33,12 +33,11 @@ export const printCountryData = () => {
     // console.log("Life Expectancy: " + yearLE + "; Country: " + window.country );
     // console.log("Population: " + yearPopulation + "; Country: " + window.country );
 
-    var gdpEl = document.getElementById('gdp');
-    gdpEl.innerHTML = 'GDP: ' + numberInUnits(parseFloat(yearGDP.replace(',', '.')), 9, 2) + ' bil.';
-
-    //let gdptest = Object.keys(gdpData).map((key) => {
+    //var gdpEl = document.getElementById('gdp');
+    //gdpEl.innerHTML = 'GDP: ' + numberInUnits(parseFloat(yearGDP.replace(',', '.')), 9, 2) + ' bil.';
+    //let gdptest = Object.keys(population).map((key) => {
     //  const countryCodeObj = {'Country Name': key};
-    //  const row = {...countryCodeObj, ...gdpData[key]};
+    //  const row = {...countryCodeObj, ...population[key]};
     //  return row;
     //});
     //console.log(JSON.stringify(gdptest));
