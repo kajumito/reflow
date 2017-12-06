@@ -9,9 +9,11 @@ export default () => {
      * When year changes, event box must be updated.
      */
     window.addEventListener('yearChanged', () => {
-        //kissa();
         listWars();
+    }, false);
 
+    window.addEventListener('countryChanged', () => {
+        listWars();
     }, false);
 
 };

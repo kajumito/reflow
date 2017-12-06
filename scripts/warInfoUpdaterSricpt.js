@@ -20,7 +20,7 @@ for (let i = 0; i < sodat.length; i++) {
 
         if (err) {
             appendFileWithoutLocation(i);
-            return; // console.log("ERROOORR! No infobox! Index: ", i, err);
+            return; //console.log("ERROOORR! No infobox! Index: ", i, err);
         }
 
         else if (typeof data.place == 'undefined') {
@@ -52,9 +52,7 @@ for (let i = 0; i < sodat.length; i++) {
                 'start': sodat[i].start,
                 'stop': sodat[i].stop,
                 'name': sodat[i].name,
-                'link': sodat[i].linkki,
-                'victoriousParty': sodat[i].voittajat,
-                'defeatedParty': sodat[i].looserit,
+                'link': sodat[i].link,
                 'location': locationList
             };
 
@@ -70,7 +68,14 @@ for (let i = 0; i < sodat.length; i++) {
 
 function appendFileWithoutLocation(sotaIndex) {
 
-    fs.appendFile('SODAT.json', JSON.stringify(sodat[sotaIndex]) + ',', function (err) {
+    var sota = {
+        'start': sodat[sotaIndex].start,
+        'stop': sodat[sotaIndex].stop,
+        'name': sodat[sotaIndex].name,
+        'link': sodat[sotaIndex].link
+    };
+
+    fs.appendFile('SODAT.json', JSON.stringify(sota) + ',', function (err) {
         if (err) {
             return console.log(err);
         }

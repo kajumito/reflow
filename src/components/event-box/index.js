@@ -4,33 +4,24 @@ import wars from '../../data/SODAT.json';
 
 /**
  * Lists wars (randomly) to the event box based on the current year and countries where the refugees are coming from
+ * TODO: Bug checking. Do we want to display wars that don't concern countryList countries? 
  */
 export const listWars = () => {
 
     var year = window.year;
     var country = window.country;
     var countryList = window.map.fromCountryList;
-    // var war;
-    var warCount = 3;
+    var warCount = 5;
     var warsUl = document.getElementById('wars');
+    var indexList = [];
 
     countryList.push(country);
-
-    // //Delete all "li" elements from the eventBox
-    // var liLista = document.querySelectorAll('#event-box li');
 
     if (warsUl.childElementCount != 0) {
         while (warsUl.firstChild) {
             warsUl.removeChild(warsUl.firstChild);
         }
     }
-
-    //delete all other elements from eventBox. If needed.
-    //eventBox.innerHTML = "";
-    //or
-    //while (eventBox.firstChild) {
-    //    eventBox.removeChild(eventBox.firstChild);
-    //}
 
     for (let i in wars) {
         if (wars[i].start == year) {
@@ -64,9 +55,19 @@ export const listWars = () => {
 
     function addWarToBox(warIndex) {
 
+        //Check if the event box is full
         warsUl = document.getElementById('wars');
         if (warsUl.childElementCount >= warCount)
             return;
+
+        //Check for doubles
+        for (let i in indexList) {
+            if (indexList[i] == warIndex) {
+                return;
+            }
+        }
+
+        indexList.push(warIndex);
 
         var eventBox = document.createElement('li');
         eventBox.id = 'event-box';
@@ -75,7 +76,7 @@ export const listWars = () => {
         var warName = document.createElement('h4');
         warName.classList.add('war-name');
         var warLink = document.createElement('a');
-        warLink.href = wars[warIndex].linkki;
+        warLink.href = wars[warIndex].link;
         var warTitle = document.createTextNode(wars[warIndex].name);
         warLink.appendChild(warTitle);
         warName.appendChild(warLink);
@@ -97,5 +98,4 @@ export const listWars = () => {
 export default () => {
     listWars();
     listeners();
-    //kissa();
 };
