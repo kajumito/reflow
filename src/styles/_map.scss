@@ -34,12 +34,12 @@
     */
 
     .arc {
-        stroke: $arcs-color;
-        stroke-width: 2;
         /*
+        stroke: $arcs-color;
         stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         */
+        stroke-width: 2;
         fill: none;
         animation: dash 3s linear infinite;
         pointer-events: none;

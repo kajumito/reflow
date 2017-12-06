@@ -21,6 +21,50 @@ export const drawArcs = c => {
     return `M${d.source[0]},${d.source[1]}A${dr} ${dr} 0 0,${sweep} ${d.target[0]},${d.target[1]}`;
 };
 
+
+/**
+ * Returns length for the line indicating the amount of refugees.
+ */
+function setLineLength(refugeeNum){
+
+    //TODO: everything
+    return 100;
+}
+
+
+/**
+ * Returns color for the line indicating the amount of refugees
+ * TODO: Better scaling? RefugeeNum fluctuates from 1 to over 100 000. Colors are good?
+ */
+function setLineColor(refugeeNum) {
+
+    if (refugeeNum < 10) {
+        //console.log("<10");
+        return "#006400";
+    }
+
+    if (10 < refugeeNum && refugeeNum < 100) {
+        //console.log("10-50");
+        return "#00FF00";
+    }
+
+    if (100 < refugeeNum && refugeeNum < 1000) {
+        //console.log("50-100");
+        return "#FEFF00";
+    }
+
+    if (1000 < refugeeNum && refugeeNum < 5000) {
+        //console.log("100-500");
+        return "#FF7F00";
+    }
+
+    if (5000 < refugeeNum) {
+        //console.log(refugeeNum);
+        return "#FF0000";
+    }
+}
+
+
 /**
  * Saves current year's traffic coordinates to a global variable
  */
@@ -31,10 +75,11 @@ export const processCoordinates = (traffic) => {
         selectAll('.arc').remove();
     }
 
-
     if (traffic[window.year]) {
         traffic[window.year].map((countryObject) => {
             const { country } = countryObject;
+            const { countAsylum } = countryObject;
+            const { countRefugee } = countryObject;
             if (!country
                 || country === 'Various/Unknown'
                 || country === 'Stateless') return true;
@@ -65,49 +110,32 @@ export const processCoordinates = (traffic) => {
             window.map.fromCountryList.push(country);
             window.map.allCoordinates.push(coordinates);
 
+            //Count total of the asylum seekers and the refugees
             var totalRefugees = 0;
             var refugeeCount = 0;
             var asylumCount = 0;
 
-            //Get refugee count per country so it can be used to create function in animation
-            //TODO: Better way to get the data??
-            for (let i in traffic[window.year]) {
-
-                if (traffic[window.year][i].country == country) {
-
-                    if (typeof traffic[window.year][i].countRefugee != 'undefined') {
-                        refugeeCount = parseInt(traffic[window.year][i].countRefugee);
-                    }
-
-                    if (typeof traffic[window.year][i].countAsylum != 'undefined') {
-                        asylumCount = parseInt(traffic[window.year][i].countAsylum);
-                    }
-
-                    totalRefugees = refugeeCount + asylumCount;
-                    //console.log("kk", totalRefugees);
-                }
+            if (typeof countRefugee != 'undefined') {
+                refugeeCount = parseInt(countRefugee);
             }
 
-            // this is unnessessary... here just for demo purpose
-            svg.append('path')
+            if (typeof countAsylum != 'undefined') {
+                asylumCount = parseInt(countAsylum);
+            }
+
+            totalRefugees = refugeeCount + asylumCount;
+
+            //Animation
+            let line = svg.append('path')
                 .datum(coordinates)
                 .attr('d', drawArcs)
                 .attr('class', 'arc')
-                //.attr("stroke", 'blue');
-            //.exit();
 
-            //Just some playing with animations. Changing "stroke-dashoffset" and/or "stroke-dasharray"
-            //based on refugee count could show traffic amount. Or changing "stroke"
-            //TODO: Better animation
-            selectAll('.arc')
-                .attr("stroke-dasharray", 100)
-                .attr("stroke-dashoffset", 100)
-                //.attr("stroke", 'blue')
-                .transition()
-                //.duration(3000)
-                .attr("stroke-dashoffset", 0);
-                //.attr("stroke", 'red');
-                //.exit();
+            var totalLength = line.node().getTotalLength();
+
+            line
+                .attr("stroke-dasharray", setLineLength(totalRefugees))
+                .attr("stroke", setLineColor(totalRefugees)) 
         });
     }
 };
