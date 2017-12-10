@@ -4,6 +4,7 @@ import gdpcapita from '../../data/GDPCapita.Json';
 import le from '../../data/LEData.json';
 import population from '../../data/PopulationData.json';
 import * as R from 'ramda';
+import axios from 'axios';
 
 
 function numberInUnits(a, exponent, fixedPoint)
@@ -27,7 +28,7 @@ export const printCountryData = () => {
     var yearCapita = R.find(R.propEq('Country Name', window.country), gdpcapita)[year];    
     var yearLE = R.find(R.propEq('Country Name', window.country), le)[year];
     var yearPopulation = R.find(R.propEq('Country Name', window.country), population)[year];
-    
+
     //console.log('GDP: ' + numberInUnits(parseFloat(yearGDP.replace(',', '.')), 9, 2) + ' billion; Country: ' + window.country );
     //console.log("Capita: " + numberInUnits(parseFloat(yearCapita.replace(',', '.')), 3, 2) + " k; Country: " + window.country );
     //console.log("Life Expectancy: " + numberInUnits(parseFloat(yearLE.replace(',', '.')), 0, 1) + " years; Country: " + window.country );

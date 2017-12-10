@@ -77,7 +77,7 @@ export default () => {
     /**
      * Some responsivity for map
      */
-    window.addEventListener('resize', () => {
+    window.addEventListener('resize', async () => {
         const node = svg.node();
         const newWidth = Math.min(node.parentElement.offsetWidth, mapConfig.width);
         const newHeight = Math.min(node.parentElement.offsetHeight, mapConfig.height);
@@ -93,5 +93,12 @@ export default () => {
         window.map.geoData.map(d => { d.centroid = projection(geoCentroid(d)); });
         // this is only needed if we want to show centroids on map
         selectAll('circle').attr('cx', d => d.centroid[0]).attr('cy', d => d.centroid[1]);
+
+        try {
+            const dataPromise = await getRefugeeData();
+            processCoordinates(dataPromise);
+        } catch (error) {
+            console.error('Couln\'t fetch refugee data on year change: ', error);
+        }
     });
 };

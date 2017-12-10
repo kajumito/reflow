@@ -1,5 +1,6 @@
 aside.info-container {
 	padding: 20px;
+	overflow: auto;
 
 	h2.side-title {
 		border-bottom: 4px solid $primary-color;
@@ -12,17 +13,65 @@ aside.info-container {
 	}
 
 	#country-info {
-		height: 50%;
+		height: 450px;
 
-		ul {
+		ul#info-section {
 			list-style-type: none;
 			margin-top: 20px;
 			font-size: 20px;
 		}
 	}
 
+#additional-countries {
+	margin-top: 10px;
+	color: $font-main-color;
+	font-size: 16px;
+	height: 100px;
+	
+	h3 {
+		color: $font-secondary-color;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	#titles {
+		display: flow-root;
+		margin-bottom: 10px;
+		h4#country{
+			float: left;
+		}
+		h4#amount{
+			float: right;
+		}
+	}
+	
+	#unlisted {
+		font-size: 14px;
+		li {
+			padding: 5px 0;
+		}
+		overflow:auto;
+		height: 100px;
+		h4#unlisted-countries-amount {
+			float: right;
+		}
+		#unlisted-countries {
+			list-style-type: none;
+			float: left;
+		}
+		#unlisted-amount {
+			list-style-type: none;
+			float: right;
+			li{
+				float:right;
+				clear: both;
+			}
+		}
+	}
+}
+
 	#events-info {
-		height: 50%;
+		height: 400px;
 
 		ul {
 			list-style-type: none;
