@@ -73,12 +73,13 @@ csvParser.fromFile(path)
 function createFiles(json) {
     Object.keys(json).forEach(key => {
         // check if key exists in replaceDict and use that in filename if matched
-        const newKey = replaceDict[key] !== undefined ? replaceDict[key] : key;
-        const fileName = slugify(newKey, {lower: true, remove: /[$*_+~.,()'"!\-:@]/g});
-
-        fs.writeFile(`./src/data/${fileName}.json`, JSON.stringify(json[key]), e => {
-            if (e) console.error(e);
-            console.log(`File ${fileName}.json created`);
-        });
+        console.log(key);
+        //const newKey = replaceDict[key] !== undefined ? replaceDict[key] : key;
+        //const fileName = slugify(newKey, {lower: true, remove: /[$*_+~.,()'"!\-:@]/g});
+//
+        //fs.writeFile(`./src/data/${fileName}.json`, JSON.stringify(json[key]), e => {
+        //    if (e) console.error(e);
+        //    console.log(`File ${fileName}.json created`);
+        //});
     });
 }

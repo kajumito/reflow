@@ -25,10 +25,9 @@ export const drawArcs = c => {
 /**
  * Returns length for the line indicating the amount of refugees.
  */
-function setLineLength(refugeeNum){
-
-    //TODO: everything
-    return 100;
+function setLineLength(refugeeNum, maxCount) {
+    const scaledCount = refugeeNum / maxCount * 200;
+    return scaledCount > 50 ? scaledCount : 50;
 }
 
 
@@ -38,29 +37,29 @@ function setLineLength(refugeeNum){
  */
 function setLineColor(refugeeNum) {
 
-    if (refugeeNum < 10) {
+    if (refugeeNum <= 10) {
         //console.log("<10");
-        return "#006400";
+        return '#8FBF71';
     }
 
-    if (10 < refugeeNum && refugeeNum < 100) {
+    if (10 < refugeeNum && refugeeNum <= 100) {
         //console.log("10-50");
-        return "#00FF00";
+        return '#E6FF7B';
     }
 
-    if (100 < refugeeNum && refugeeNum < 1000) {
+    if (100 < refugeeNum && refugeeNum <= 1000) {
         //console.log("50-100");
-        return "#FEFF00";
+        return '#FFE452';
     }
 
-    if (1000 < refugeeNum && refugeeNum < 5000) {
+    if (1000 < refugeeNum && refugeeNum <= 5000) {
         //console.log("100-500");
-        return "#FF7F00";
+        return '#FFA24C';
     }
 
     if (5000 < refugeeNum) {
         //console.log(refugeeNum);
-        return "#FF0000";
+        return '#FF6251';
     }
 }
 
@@ -76,10 +75,21 @@ export const processCoordinates = (traffic) => {
     }
 
     if (traffic[window.year]) {
+        // Get minimum and maximum counts per country
+        const getCount = (obj) => parseInt(obj.countAsylum || 0) + parseInt(obj.countRefugee || 0);
+        const counts = R.map(getCount, traffic[window.year]);
+        const [minCount, maxCount] = [
+            R.reduce(R.min, Infinity, counts),
+            R.reduce(R.max, -Infinity, counts)
+        ];
+
         traffic[window.year].map((countryObject) => {
-            const { country } = countryObject;
-            const { countAsylum } = countryObject;
-            const { countRefugee } = countryObject;
+            const { 
+                country,
+                countAsylum,
+                countRefugee 
+            } = countryObject;
+
             if (!country
                 || country === 'Various/Unknown'
                 || country === 'Stateless') return true;
@@ -129,13 +139,13 @@ export const processCoordinates = (traffic) => {
             let line = svg.append('path')
                 .datum(coordinates)
                 .attr('d', drawArcs)
-                .attr('class', 'arc')
+                .attr('class', 'arc');
 
             var totalLength = line.node().getTotalLength();
 
             line
-                .attr("stroke-dasharray", setLineLength(totalRefugees))
-                .attr("stroke", setLineColor(totalRefugees)) 
+                .attr('stroke-dasharray', setLineLength(totalRefugees, maxCount))
+                .attr('stroke', setLineColor(totalRefugees));
         });
     }
 };
