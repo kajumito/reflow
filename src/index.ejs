@@ -20,6 +20,7 @@ var pkg = require('../package.json');
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
   </head>
 
   <body>
@@ -51,10 +52,13 @@ var pkg = require('../package.json');
       </aside>
 
       <main class="map-container">
-        <div id="map"></div>
+        <div id="map" class="animate-stop"></div>
         <div id="slider">
           <h3>Current year</h3>
-          <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" step="0.1">
+          <div class="slider-wrapper">
+            <button class="togglePlay"></button>
+            <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" step="0.005">  
+          </div>
           <output name="outputYear" id="outputYear">1983</output>
         </div>
       </main>

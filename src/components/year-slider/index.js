@@ -8,11 +8,23 @@ import { yearChanged } from './events';
 // dom-elements
 export const sliderEl = document.querySelector('#inputYear');
 export const outputYearEl = document.querySelector('#outputYear');
+export const playButton = document.querySelector('.togglePlay');
+
+export const loadPlayButton = () => {
+    // Empty playButton's children
+    while (playButton.firstChild) { playButton.removeChild(playButton.firstChild); }
+    // Append play-icon
+    const html = window.sliderPlaying 
+        ? '<i class="fas fa-pause"></i>' : '<i class="fas fa-play"></i>';
+    new DOMParser()
+        .parseFromString(html, 'text/html')
+        .body.childNodes.forEach(node => playButton.appendChild(node));
+};
 
 /**
  * Initializes slider years to correspond selected country data
  */
-const sliderInit = async () => {
+export const sliderInit = async () => {
     if (!sliderEl) return;
     const slugOptions = {lower: true, remove: /[$*_+~.,()'"!\-:@]/g};
     const dataResponse = await axios.get(`/data/${slugify(window.country, slugOptions)}.json`);
@@ -36,6 +48,8 @@ const sliderInit = async () => {
         sliderEl.value = cursorYear;
         window.dispatchEvent(yearChanged);
     }
+
+    loadPlayButton();
 };
 
 export default async () => {

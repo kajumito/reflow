@@ -48,4 +48,33 @@
 	  border: 1px solid $font-light-color;
 	  -webkit-appearance: none;
 	}
+
+	.slider-wrapper {
+		width: 100%;
+		text-align: center;
+		
+		button.togglePlay {
+			height: 30px;
+			margin: 0;
+			padding: 2px 10px;
+			background-color: transparent;
+			border: 0;
+			transform: translateY(-2px);
+
+			&:hover {
+				path {
+					color: rgb(146, 146, 146);
+				}
+			}
+
+			&:focus {
+				outline: 0;
+				border: 0;
+			}
+
+			path {
+				color: rgb(122, 122, 122);
+			}
+		}
+	}
 }

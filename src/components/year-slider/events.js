@@ -10,3 +10,5 @@ const createEvent = (name) => {
 };
 
 export const yearChanged = createEvent('yearChanged');
+export const sliderPlayStarted = createEvent('sliderPlayStarted');
+export const sliderPlayStopped = createEvent('sliderPlayStopped');

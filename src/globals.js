@@ -12,4 +12,5 @@ export default () => {
         year: '',
         countries: []
     };
+    window.sliderPlaying = false;
 };

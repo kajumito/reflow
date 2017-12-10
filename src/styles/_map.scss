@@ -25,24 +25,16 @@
         stroke: #577B8C;
     }
 
-    /*
     .arc {
-        stroke: $arcs-color;
-        stroke-width: 2;
-        fill: none;
-    }
-    */
-
-    .arc {
-        /*
-        stroke: $arcs-color;
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        */
         stroke-width: 2;
         fill: none;
         animation: dash 8s linear infinite;
         pointer-events: none;
+    }
+
+    &.animate-stop .arc {
+        animation: none;
+        stroke-dasharray: 0;
     }
   
     @keyframes dash {
