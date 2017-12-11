@@ -1,0 +1,91 @@
+
+  <!doctype html>
+
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>
+      reflow
+    </title>
+    <meta name="description" content="Visualization tool of the refugee flows around the world.">
+    <meta name="author" content="Kasper Tontti, Mikko Kokkoniemi, Hentter Eloranta, Tapio Mylläri">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/index.css?v=0.0.1">
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">Refugee flow visualization</h1>
+      <a href="#" class="menu-link">About</a>
+    </header>
+
+    <div class="flex-container">
+      <aside class="info-container">
+        <div id="country-info">
+          <h2 class="side-title">Finland</h2>
+          <ul id="info-section">
+            <li id="population">Population: 5,4mil.</li>
+            <li id="gdp">GDP: 235,8mil.</li>
+            <li id="gdp-capita">GDP (capita): 43,1k</li>
+            <li id="life-expentancy">Life expentancy: 81.4</li>
+          </ul>
+          <div id="additional-countries">
+            <h3>Refugees from countries that are not visible on the map</h3>
+            <div id="titles">
+              <h4 id="country">Country</h4>
+              <h4 id="amount">Amount</h4>
+            </div>
+              <div id="unlisted">
+                 <ul id="unlisted-countries">
+                    <li class="unlisted-country-name">Unknown/Various</li>
+                    <li class="unlisted-country-name">Malta</li>
+                    <li class="unlisted-country-name">Andorra</li>
+                    <li class="unlisted-country-name">Lao People's Dem. Rep.</li>
+                    <li class="unlisted-country-name">Monaco</li>
+                 </ul>
+                 <ul id="unlisted-amount">
+                    <li class="unlisted-country-amount">21305</li>  
+                    <li class="unlisted-country-amount">532</li>  
+                    <li class="unlisted-country-amount">7</li>  
+                    <li class="unlisted-country-amount">3205</li>  
+                    <li class="unlisted-country-amount">20</li>  
+                 </ul>
+                </div>
+              </div>
+          </div>
+        <div id="events-info">
+          <h2 class="side-title">Wars</h2>
+          <ul id="event-section">
+            <li id="event-desc">The wars that have been fought during this time.</li>
+            <ul id="wars">
+              <!-- implemented in components/event-box -->
+            </ul>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="map-container">
+        <div id="map" class="animate-stop"></div>
+        <div id="slider">
+          <h3>Current year</h3>
+          <div class="slider-wrapper">
+            <button class="togglePlay"></button>
+            <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" step="0.005">  
+          </div>
+          <output name="outputYear" id="outputYear">1983</output>
+        </div>
+      </main>
+    </div>
+
+    <script src="bundle.js?v=0.0.1"></script>
+  </body>
+
+  </html>
