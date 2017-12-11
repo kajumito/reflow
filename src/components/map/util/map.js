@@ -152,7 +152,7 @@ export const processCoordinates = (traffic) => {
 
 export const getRefugeeData = async () => {
     const slugOptions = { lower: true, remove: /[$*_+~.,()'"!\-:@]/g };
-    const dataResponse = await axios.get(`/data/${slugify(window.country, slugOptions)}.json`);
+    const dataResponse = await axios.get(`data/${slugify(window.country, slugOptions)}.json`);
     if (dataResponse.status === 200) {
         return dataResponse.data;
     }

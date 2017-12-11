@@ -27,7 +27,7 @@ export const loadPlayButton = () => {
 export const sliderInit = async () => {
     if (!sliderEl) return;
     const slugOptions = {lower: true, remove: /[$*_+~.,()'"!\-:@]/g};
-    const dataResponse = await axios.get(`/data/${slugify(window.country, slugOptions)}.json`);
+    const dataResponse = await axios.get(`data/${slugify(window.country, slugOptions)}.json`);
 
     if (dataResponse.status === 200) {
         const {data} = dataResponse;

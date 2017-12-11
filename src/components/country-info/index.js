@@ -4,7 +4,6 @@ import gdpcapita from '../../data/GDPCapita.Json';
 import le from '../../data/LEData.json';
 import population from '../../data/PopulationData.json';
 import * as R from 'ramda';
-import axios from 'axios';
 
 
 function numberInUnits(a, exponent, fixedPoint)
