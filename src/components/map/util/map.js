@@ -27,7 +27,7 @@ export const drawArcs = c => {
  */
 function setLineLength(refugeeNum, maxCount) {
     const scaledCount = refugeeNum / maxCount * 200;
-    return scaledCount > 50 ? scaledCount : 50;
+    return scaledCount > 20 ? scaledCount : 20;
 }
 
 

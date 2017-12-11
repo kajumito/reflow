@@ -18,7 +18,7 @@ import {
 
 
 export default () => {
-    let sliderMoveIntervalId = null;
+    let sliderMoveIntervalId;
 
     /**
      * Change the year when slider changes

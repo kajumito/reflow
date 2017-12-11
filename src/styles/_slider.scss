@@ -62,6 +62,8 @@
 			transform: translateY(-2px);
 
 			&:hover {
+				cursor: pointer;
+				
 				path {
 					color: rgb(146, 146, 146);
 				}
