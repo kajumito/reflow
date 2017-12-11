@@ -91,7 +91,6 @@ export const processCoordinates = (traffic) => {
             } = countryObject;
 
             if (!country
-                || country === 'Various/Unknown'
                 || country === 'Stateless') return true;
 
             // If we wish to give some presentation of those countries that we haven't
