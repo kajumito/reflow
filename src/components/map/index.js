@@ -23,6 +23,47 @@ export let allCoordinates = [];
 export let fromCountryList=[];
 
 
+//TODO: Get real country list 
+function makeDropDownList() {
+
+    var dropDownList = document.getElementById("dropDownList");
+
+    var k = document.createElement("option");
+    k.setAttribute("value", "Sweden");
+    k.appendChild(document.createTextNode("Sweden"));
+
+    var k1 = document.createElement("option");
+    k1.setAttribute("value", "Finland");
+    k1.appendChild(document.createTextNode("Finland"));
+
+    var k2 = document.createElement("option");
+    k2.setAttribute("value", "Germany");
+    k2.appendChild(document.createTextNode("Germany"));
+
+    var k3 = document.createElement("option");
+    k3.setAttribute("value", "Slovenia");
+    k3.appendChild(document.createTextNode("Slovenia"));
+
+    dropDownList.appendChild(k);
+    dropDownList.appendChild(k1);
+    dropDownList.appendChild(k2);
+    dropDownList.appendChild(k3);
+
+    var dropDown = document.getElementById("dropDownDiv");
+
+    var but = document.createElement("button");
+    
+    but.innerHTML = "Do Something";
+    dropDown.appendChild(but);
+    but.addEventListener("click",function(){
+
+        var a = document.getElementById("dropDownList").value;
+        window.country = a;
+        window.dispatchEvent(countryChanged);
+    });
+}
+
+
 const drawMap = (countries, traffic) => {
     // load map data to array
     window.map.geoData = topojson.feature(countries, countries.objects.ne_110m_admin_0_countries).features;
@@ -74,6 +115,7 @@ export default async () => {
         console.error(error);
     }
     listeners();
+    makeDropDownList();
 
     // Init target-country class from window.country
     const countriesEl = document.querySelector('.countries');

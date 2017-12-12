@@ -21,6 +21,15 @@ var pkg = require('../package.json');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+
+    <script>
+      function toggleList() {
+        document.getElementById("dropDownList").classList.toggle("show");
+      }
+
+    </script>
+
+
   </head>
 
   <body>
@@ -32,7 +41,10 @@ var pkg = require('../package.json');
     <div class="flex-container">
       <aside class="info-container">
         <div id="country-info">
-          <h2 class="side-title">Finland</h2>
+          <div id="dropDownDiv">
+            <h2 id="countryTitle" onclick="toggleList()" class="side-title">Finland</h2>
+            <select id="dropDownList"  class="dropdown-content"></select>
+          </div>
           <ul id="info-section">
             <li id="population">Population: 5,4mil.</li>
             <li id="gdp">GDP: 235,8mil.</li>
@@ -45,24 +57,24 @@ var pkg = require('../package.json');
               <h4 id="country">Country</h4>
               <h4 id="amount">Amount</h4>
             </div>
-              <div id="unlisted">
-                 <ul id="unlisted-countries">
-                    <li class="unlisted-country-name">Unknown/Various</li>
-                    <li class="unlisted-country-name">Malta</li>
-                    <li class="unlisted-country-name">Andorra</li>
-                    <li class="unlisted-country-name">Lao People's Dem. Rep.</li>
-                    <li class="unlisted-country-name">Monaco</li>
-                 </ul>
-                 <ul id="unlisted-amount">
-                    <li class="unlisted-country-amount">21305</li>  
-                    <li class="unlisted-country-amount">532</li>  
-                    <li class="unlisted-country-amount">7</li>  
-                    <li class="unlisted-country-amount">3205</li>  
-                    <li class="unlisted-country-amount">20</li>  
-                 </ul>
-                </div>
-              </div>
+            <div id="unlisted">
+              <ul id="unlisted-countries">
+                <li class="unlisted-country-name">Unknown/Various</li>
+                <li class="unlisted-country-name">Malta</li>
+                <li class="unlisted-country-name">Andorra</li>
+                <li class="unlisted-country-name">Lao People's Dem. Rep.</li>
+                <li class="unlisted-country-name">Monaco</li>
+              </ul>
+              <ul id="unlisted-amount">
+                <li class="unlisted-country-amount">21305</li>
+                <li class="unlisted-country-amount">532</li>
+                <li class="unlisted-country-amount">7</li>
+                <li class="unlisted-country-amount">3205</li>
+                <li class="unlisted-country-amount">20</li>
+              </ul>
+            </div>
           </div>
+        </div>
         <div id="events-info">
           <h2 class="side-title">Wars</h2>
           <ul id="event-section">
@@ -80,7 +92,7 @@ var pkg = require('../package.json');
           <h3>Current year</h3>
           <div class="slider-wrapper">
             <button class="togglePlay"></button>
-            <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" step="0.005">  
+            <input type="range" name="inputYear" id="inputYear" value="1983" min="1950" max="2016" step="0.005">
           </div>
           <output name="outputYear" id="outputYear">1983</output>
         </div>
