@@ -25,30 +25,61 @@ export let allCoordinates = [];
 export let fromCountryList = [];
 
 
+function makeSearchBar() {
 
-//Lists all the countries in the world to a drop down list so user can search for the country without clicking the map
-function makeDropDownList() {
-
-    var dropDownList = document.getElementById("dropDownList");
+    var searchBarList = document.getElementById("searchBarList");
 
     for (let i in worldCountryList) {
-        var listItem = document.createElement("option");
-        listItem.setAttribute("value", worldCountryList[i]);
+        var listItem = document.createElement("li");
+        listItem.style.display = "none";
+        listItem.setAttribute("id", worldCountryList[i]);
         listItem.appendChild(document.createTextNode(worldCountryList[i]));
-        dropDownList.appendChild(listItem);
+        searchBarList.appendChild(listItem);
+
+        document.getElementById(worldCountryList[i]).addEventListener("click", function () {
+            var countryFromList = document.getElementById(worldCountryList[i]).id;
+            window.country = countryFromList;
+            document.getElementById("searchBarList").style.display = "none";
+            window.dispatchEvent(countryChanged);
+        });
     }
 
-    document.getElementById("countryBut").addEventListener("click", function () {
-        var countryFromList = document.getElementById("dropDownList").value;
-        window.country = countryFromList;
-        window.dispatchEvent(countryChanged);
-    });
+    var input = document.getElementById("searchBarInput");
+    var ul = document.getElementById("searchBarList");
 
     document.getElementById("search").addEventListener("click", function () {
-        document.getElementById("dropDownList").classList.toggle("show");
-        document.getElementById("countryBut").classList.toggle("show");
+        input.classList.toggle("show");
+    });
+
+    //Filter for search bar
+    input.addEventListener("keyup", function () {
+
+        var list = searchBarList.childNodes;
+
+        if (typeof input.textContent == 'undefined')
+            return;
+
+        for (let i in list) {
+
+            if (typeof list[i].id == 'undefined')
+                return;
+
+            if (input.value.length == 0) {
+                ul.style.display = "none";
+            }
+            else {
+                ul.style.display = "";
+            }
+
+            if (list[i].id.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+                list[i].style.display = "";
+            } else {
+                list[i].style.display = "none";
+            }
+        }
     });
 }
+
 
 //Creates a tooltip for seeing how many refugees came from highlighted country to 
 //currently selected country.
@@ -68,18 +99,19 @@ function makeTooltip() {
 
     d3select.selectAll("path")
         .on("mouseover", async function (d) {
+
+            //Some errors without this. Don't know what happens or doens't
+            if (typeof d == 'undefined')
+                return;
+
             var refugeeData = await getRefugeeData();
             tooltip.style("visibility", "visible");
             var refugeeAmount;
             //If there are no refugees from highlighted country, then the amount is set to zero.
             try {
-
                 refugeeAmount = R.find(R.propEq("country", d.properties.NAME), refugeeData[window.year])["countRefugee"];
-
             } catch (error) {
-
                 refugeeAmount = 0;
-
             }
 
             tooltip.text(d.properties.NAME + ": " + refugeeAmount);
@@ -89,7 +121,6 @@ function makeTooltip() {
                 .style("left", (event.pageX + 10) + "px");
         })
         .on("mouseout", function () { return tooltip.style("visibility", "hidden"); });
-
 }
 
 const drawMap = (countries, traffic) => {
@@ -144,7 +175,7 @@ export default async () => {
         console.error(error);
     }
     listeners();
-    makeDropDownList();
+    makeSearchBar();
     makeTooltip();
 
     // Init target-country class from window.country
