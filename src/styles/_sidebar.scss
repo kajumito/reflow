@@ -4,16 +4,15 @@ aside.info-container {
 
 	h2.side-title {
 		border-bottom: 4px solid $primary-color;
+		float: left;
 	}
 	
 	.dropdown-content {
 		display: none;
-		position: absolute;
-		background-color: #f6f6f6;
-		min-width: 230px;
-		overflow: auto;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		z-index: 1;
+	}
+
+	.dropdown-content-button {
+		display: none;
 	}
 	
 	.show {display:block;}

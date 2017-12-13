@@ -22,14 +22,6 @@ var pkg = require('../package.json');
   <![endif]-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 
-    <script>
-      function toggleList() {
-        document.getElementById("dropDownList").classList.toggle("show");
-      }
-
-    </script>
-
-
   </head>
 
   <body>
@@ -42,8 +34,10 @@ var pkg = require('../package.json');
       <aside class="info-container">
         <div id="country-info">
           <div id="dropDownDiv">
-            <h2 id="countryTitle" onclick="toggleList()" class="side-title">Finland</h2>
-            <select id="dropDownList"  class="dropdown-content"></select>
+            <h2 id="countryTitle" class="side-title">Finland</h2>
+            <i style="cursor:pointer" class="fa fa-search" id="search"></i>
+            <select id="dropDownList" class="dropdown-content"></select>
+            <button id="countryBut" class="dropdown-content-button">Choose country</button>
           </div>
           <ul id="info-section">
             <li id="population">Population: 5,4mil.</li>
