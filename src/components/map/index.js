@@ -1,7 +1,8 @@
 //import { scaleLinear } from 'd3-scale';
 import { geoCentroid } from 'd3-geo';
+import * as d3select from 'd3-selection';
 import * as topojson from 'topojson-client';
-//import * as R from 'ramda';
+import * as R from 'ramda';
 //import gdpData from '../../data/GDPData.json';
 
 import listeners from './listeners';
@@ -63,6 +64,27 @@ function makeDropDownList() {
     });
 }
 
+function makeTooltip()
+{
+	var tooltip = d3select.select("body")
+	.append("div")
+	.attr("class", "tooltip")
+	.style("position", "absolute")
+	.style("text-align", "center")
+	.style("background", "#F0F0F0")
+	.style("border", "0px")
+	.style("border-radius", "8px")
+	.style("padding", "2px")
+	.style("pointer-events", "none")
+	
+	d3select.selectAll("path")
+		.on("mouseover", function(d) { 
+			tooltip.style("visibility", "visible");
+			tooltip.text(d.properties.NAME);})
+		.on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px")
+			.style("left",(event.pageX+10)+"px");})
+		.on("mouseout", function() { return tooltip.style("visibility", "hidden"); });
+}
 
 const drawMap = (countries, traffic) => {
     // load map data to array
@@ -81,7 +103,15 @@ const drawMap = (countries, traffic) => {
         .attr('id', (d) => d.properties.NAME)
         .attr('country-code', (d) => d.properties.ADM0_A3)
         .attr('d', path)
-        .exit();
+		.exit();
+		
+		//.append('svg:title')
+		//.text(async function (d) { 
+		//	var countryUndermouse = d.properties.NAME;
+		//	var refugees = await getRefugeeData();
+		//	console.log(R.find(R.propEq("country", countryUndermouse), refugees["2002"]));
+		//	return R.find(R.propEq("country", countryUndermouse), refugees[window.year]);})
+        
 
     // draw centroids of countries
     //groupCentroids.attr('class', 'centroids')
@@ -116,6 +146,7 @@ export default async () => {
     }
     listeners();
     makeDropDownList();
+	makeTooltip();
 
     // Init target-country class from window.country
     const countriesEl = document.querySelector('.countries');
