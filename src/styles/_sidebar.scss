@@ -8,7 +8,27 @@ aside.info-container {
 	}
 	
 	.search-bar {
-		display: none;
+		border-bottom: 4px solid $primary-color;
+		background: $background-color;
+		//display: none;
+	}
+
+	#searchBarList{
+		list-style-type: none;
+		max-height:100px;
+		overflow:auto;
+		z-index: 2;
+	}
+
+	.search-bar-li{
+		border: 1px solid $primary-color;
+		margin-top: -1px;
+		padding: 0px;
+		cursor:pointer;
+	}
+
+	.search-bar-li:hover{
+		background: $primary-color;
 	}
 	
 	.show {display:block;}

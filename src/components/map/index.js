@@ -10,7 +10,8 @@ import jsonWorldMap from './maps/world.json';
 import {
     projection,
     path,
-    svg
+    svg,
+    config
 } from './map-settings';
 //import { moveItemAlongPath } from './util/animation';
 import { processCoordinates, getRefugeeData } from './util/map';
@@ -21,6 +22,7 @@ import { countryChanged } from './events';
 let groupCountries = svg.append('g');
 let groupCentroids = svg.append('g');
 let worldCountryList = [];
+let toggle = false;
 export let allCoordinates = [];
 export let fromCountryList = [];
 
@@ -33,49 +35,96 @@ function makeSearchBar() {
         var listItem = document.createElement("li");
         listItem.style.display = "none";
         listItem.setAttribute("id", worldCountryList[i]);
+        listItem.setAttribute("class", "search-bar-li");
         listItem.appendChild(document.createTextNode(worldCountryList[i]));
         searchBarList.appendChild(listItem);
 
         document.getElementById(worldCountryList[i]).addEventListener("click", function () {
+
+            var a = document.getElementById("searchBarInput");
+            var parent = a.parentNode;
+            parent.removeChild(a);
+
+            var h2 = document.createElement("h2");
+            h2.setAttribute("id", "countryTitle");
+            h2.setAttribute("class", "side-title");
+
+            parent.insertBefore(h2, parent.firstChild);
+
             var countryFromList = document.getElementById(worldCountryList[i]).id;
             window.country = countryFromList;
             document.getElementById("searchBarList").style.display = "none";
             window.dispatchEvent(countryChanged);
+            toggle = false;
         });
     }
 
-    var input = document.getElementById("searchBarInput");
     var ul = document.getElementById("searchBarList");
 
     document.getElementById("search").addEventListener("click", function () {
-        input.classList.toggle("show");
-    });
 
-    //Filter for search bar
-    input.addEventListener("keyup", function () {
+        if (toggle == true) {
 
-        var list = searchBarList.childNodes;
+            var a = document.getElementById("searchBarInput");
+            var parent = a.parentNode;
+            parent.removeChild(a);
 
-        if (typeof input.textContent == 'undefined')
-            return;
+            var h2 = document.createElement("h2");
+            h2.setAttribute("id", "countryTitle");
+            h2.setAttribute("class", "side-title");
 
-        for (let i in list) {
+            parent.insertBefore(h2, parent.firstChild);
 
-            if (typeof list[i].id == 'undefined')
-                return;
+            document.getElementById("searchBarList").style.display = "none";
+            window.dispatchEvent(countryChanged);
 
-            if (input.value.length == 0) {
-                ul.style.display = "none";
-            }
-            else {
-                ul.style.display = "";
-            }
+            toggle = false;
+        }
 
-            if (list[i].id.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
-                list[i].style.display = "";
-            } else {
-                list[i].style.display = "none";
-            }
+        else {
+
+            toggle = true;
+            var a = document.getElementById("countryTitle");
+            var parent = a.parentNode;
+            parent.removeChild(a);
+
+            var inPutBar = document.createElement("input");
+            inPutBar.type = "text";
+            inPutBar.setAttribute("id", "searchBarInput");
+            inPutBar.setAttribute("class", "search-bar");
+            inPutBar.setAttribute("placeholder", "Enter country..")
+
+            parent.insertBefore(inPutBar, parent.firstChild);
+            toggle = true;
+
+            //Filter for search bar
+            document.getElementById("searchBarInput").addEventListener("keyup", function () {
+
+                var input = document.getElementById("searchBarInput");
+                var list = ul.childNodes;
+
+                if (typeof input.textContent == 'undefined')
+                    return;
+
+                for (let i in list) {
+
+                    if (typeof list[i].id == 'undefined')
+                        return;
+
+                    if (input.value.length == 0) {
+                        ul.style.display = "none";
+                    }
+                    else {
+                        ul.style.display = "";
+                    }
+
+                    if (list[i].id.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+                        list[i].style.display = "";
+                    } else {
+                        list[i].style.display = "none";
+                    }
+                }
+            });
         }
     });
 }
