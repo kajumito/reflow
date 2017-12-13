@@ -64,8 +64,12 @@ function makeDropDownList() {
     });
 }
 
+//Creates a tooltip for seeing how many refugees came from highlighted country to 
+//currently selected country.
 function makeTooltip()
 {
+	
+	//Creating the actual tooltip element
 	var tooltip = d3select.select("body")
 	.append("div")
 	.attr("class", "tooltip")
@@ -78,12 +82,26 @@ function makeTooltip()
 	.style("pointer-events", "none")
 	
 	d3select.selectAll("path")
-		.on("mouseover", function(d) { 
+		.on("mouseover", async function(d) { 
+			var refugeeData = await getRefugeeData();
 			tooltip.style("visibility", "visible");
-			tooltip.text(d.properties.NAME);})
+			var refugeeAmount;
+			//If there are no refugees from highlighted country, then the amount is set to zero.
+			try {
+				
+				refugeeAmount = R.find(R.propEq("country", d.properties.NAME), refugeeData[window.year])["countRefugee"];
+				
+			} catch (error) {
+				
+				refugeeAmount = 0;
+				
+			}
+			
+			tooltip.text(d.properties.NAME + ": " + refugeeAmount);})
 		.on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px")
 			.style("left",(event.pageX+10)+"px");})
 		.on("mouseout", function() { return tooltip.style("visibility", "hidden"); });
+		
 }
 
 const drawMap = (countries, traffic) => {
@@ -103,15 +121,7 @@ const drawMap = (countries, traffic) => {
         .attr('id', (d) => d.properties.NAME)
         .attr('country-code', (d) => d.properties.ADM0_A3)
         .attr('d', path)
-		.exit();
-		
-		//.append('svg:title')
-		//.text(async function (d) { 
-		//	var countryUndermouse = d.properties.NAME;
-		//	var refugees = await getRefugeeData();
-		//	console.log(R.find(R.propEq("country", countryUndermouse), refugees["2002"]));
-		//	return R.find(R.propEq("country", countryUndermouse), refugees[window.year]);})
-        
+		.exit();        
 
     // draw centroids of countries
     //groupCentroids.attr('class', 'centroids')
