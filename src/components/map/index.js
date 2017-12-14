@@ -168,11 +168,14 @@ function makeTooltip() {
 
             tooltip.text(d.properties.NAME + ': ' + (refugeeAmount + asylumAmount));
         })
-        .on('mousemove', function () {
+        .on('mouseout', function () { return tooltip.style('visibility', 'hidden'); });
+        
+    document.querySelectorAll('path').forEach(el => {
+        el.addEventListener('mousemove', (event) => {
             return tooltip.style('top', (event.pageY - 10) + 'px')
                 .style('left', (event.pageX + 10) + 'px');
-        })
-        .on('mouseout', function () { return tooltip.style('visibility', 'hidden'); });
+        });
+    }); 
 }
 
 const drawMap = (countries, traffic) => {
