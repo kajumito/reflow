@@ -2,18 +2,30 @@ aside.info-container {
 	padding: 20px;
 	overflow: auto;
 
-	h2.side-title {
+	#dropDownDiv {
 		border-bottom: 4px solid $primary-color;
+		display: flow-root;
+	}
+
+	h2.side-title{
 		float: left;
+	}
+
+	svg#search {
+		float: right;
+		font-size: 22px;
 	}
 	
 	.search-bar {
-		border-bottom: 4px solid $primary-color;
 		background: $background-color;
+		font-size: 22px;
 		//display: none;
 	}
 
 	#searchBarList{
+		position: absolute;
+		width: 215px;
+		background: $background-color;
 		list-style-type: none;
 		max-height:100px;
 		overflow:auto;
@@ -23,7 +35,7 @@ aside.info-container {
 	.search-bar-li{
 		border: 1px solid $primary-color;
 		margin-top: -1px;
-		padding: 0px;
+		padding: 5px 0;
 		cursor:pointer;
 	}
 
@@ -103,8 +115,10 @@ aside.info-container {
 			list-style-type: none;
 		}
 
-		li#event-desc {
-			clear: both;
+		p#event-desc {
+			color: $font-secondary-color;
+			display: inline-block;
+			margin: 15px 0;
 		}
 
 		li#event-box{
