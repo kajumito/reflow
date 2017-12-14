@@ -29,53 +29,53 @@ export let fromCountryList = [];
 
 function makeSearchBar() {
 
-    var searchBarList = document.getElementById("searchBarList");
+    var searchBarList = document.getElementById('searchBarList');
 
     for (let i in worldCountryList) {
-        var listItem = document.createElement("li");
-        listItem.style.display = "none";
-        listItem.setAttribute("id", worldCountryList[i]);
-        listItem.setAttribute("class", "search-bar-li");
+        var listItem = document.createElement('li');
+        listItem.style.display = 'none';
+        listItem.setAttribute('id', worldCountryList[i]);
+        listItem.setAttribute('class', 'search-bar-li');
         listItem.appendChild(document.createTextNode(worldCountryList[i]));
         searchBarList.appendChild(listItem);
 
-        document.getElementById(worldCountryList[i]).addEventListener("click", function () {
+        document.getElementById(worldCountryList[i]).addEventListener('click', function () {
 
-            var a = document.getElementById("searchBarInput");
+            var a = document.getElementById('searchBarInput');
             var parent = a.parentNode;
             parent.removeChild(a);
 
-            var h2 = document.createElement("h2");
-            h2.setAttribute("id", "countryTitle");
-            h2.setAttribute("class", "side-title");
+            var h2 = document.createElement('h2');
+            h2.setAttribute('id', 'countryTitle');
+            h2.setAttribute('class', 'side-title');
 
             parent.insertBefore(h2, parent.firstChild);
 
             var countryFromList = document.getElementById(worldCountryList[i]).id;
             window.country = countryFromList;
-            document.getElementById("searchBarList").style.display = "none";
+            document.getElementById('searchBarList').style.display = 'none';
             window.dispatchEvent(countryChanged);
             toggle = false;
         });
     }
 
-    var ul = document.getElementById("searchBarList");
+    var ul = document.getElementById('searchBarList');
 
-    document.getElementById("search").addEventListener("click", function () {
+    document.getElementById('search').addEventListener('click', function () {
 
         if (toggle == true) {
 
-            var a = document.getElementById("searchBarInput");
+            var a = document.getElementById('searchBarInput');
             var parent = a.parentNode;
             parent.removeChild(a);
 
-            var h2 = document.createElement("h2");
-            h2.setAttribute("id", "countryTitle");
-            h2.setAttribute("class", "side-title");
+            var h2 = document.createElement('h2');
+            h2.setAttribute('id', 'countryTitle');
+            h2.setAttribute('class', 'side-title');
 
             parent.insertBefore(h2, parent.firstChild);
 
-            document.getElementById("searchBarList").style.display = "none";
+            document.getElementById('searchBarList').style.display = 'none';
             window.dispatchEvent(countryChanged);
 
             toggle = false;
@@ -84,23 +84,23 @@ function makeSearchBar() {
         else {
 
             toggle = true;
-            var a = document.getElementById("countryTitle");
+            var a = document.getElementById('countryTitle');
             var parent = a.parentNode;
             parent.removeChild(a);
 
-            var inPutBar = document.createElement("input");
-            inPutBar.type = "text";
-            inPutBar.setAttribute("id", "searchBarInput");
-            inPutBar.setAttribute("class", "search-bar");
-            inPutBar.setAttribute("placeholder", "Enter country..")
+            var inPutBar = document.createElement('input');
+            inPutBar.type = 'text';
+            inPutBar.setAttribute('id', 'searchBarInput');
+            inPutBar.setAttribute('class', 'search-bar');
+            inPutBar.setAttribute('placeholder', 'Enter country..');
 
             parent.insertBefore(inPutBar, parent.firstChild);
             toggle = true;
 
             //Filter for search bar
-            document.getElementById("searchBarInput").addEventListener("keyup", function () {
+            document.getElementById('searchBarInput').addEventListener('keyup', function () {
 
-                var input = document.getElementById("searchBarInput");
+                var input = document.getElementById('searchBarInput');
                 var list = ul.childNodes;
 
                 if (typeof input.textContent == 'undefined')
@@ -112,16 +112,16 @@ function makeSearchBar() {
                         return;
 
                     if (input.value.length == 0) {
-                        ul.style.display = "none";
+                        ul.style.display = 'none';
                     }
                     else {
-                        ul.style.display = "";
+                        ul.style.display = '';
                     }
 
                     if (list[i].id.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
-                        list[i].style.display = "";
+                        list[i].style.display = '';
                     } else {
-                        list[i].style.display = "none";
+                        list[i].style.display = 'none';
                     }
                 }
             });
@@ -135,41 +135,44 @@ function makeSearchBar() {
 function makeTooltip() {
 
     //Creating the actual tooltip element
-    var tooltip = d3select.select("body")
-        .append("div")
-        .attr("class", "tooltip")
-        .style("position", "absolute")
-        .style("text-align", "center")
-        .style("background", "#F0F0F0")
-        .style("border", "0px")
-        .style("border-radius", "8px")
-        .style("padding", "2px")
-        .style("pointer-events", "none")
+    var tooltip = d3select.select('body')
+        .append('div')
+        .attr('class', 'tooltip')
+        .style('position', 'absolute')
+        .style('text-align', 'center')
+        .style('background', '#F0F0F0')
+        .style('border', '0px')
+        .style('border-radius', '8px')
+        .style('padding', '2px')
+        .style('pointer-events', 'none');
 
-    d3select.selectAll("path")
-        .on("mouseover", async function (d) {
+    d3select.selectAll('path')
+        .on('mouseover', async function (d) {
 
             //Some errors without this. Don't know what happens or doens't
             if (typeof d == 'undefined')
                 return;
 
             var refugeeData = await getRefugeeData();
-            tooltip.style("visibility", "visible");
+            tooltip.style('visibility', 'visible');
             var refugeeAmount;
+            var asylumAmount;
             //If there are no refugees from highlighted country, then the amount is set to zero.
             try {
-                refugeeAmount = R.find(R.propEq("country", d.properties.NAME), refugeeData[window.year])["countRefugee"];
+                refugeeAmount = parseInt(R.find(R.propEq('country', d.properties.NAME), refugeeData[window.year])['countRefugee']) || 0;
+                asylumAmount = parseInt(R.find(R.propEq('country', d.properties.NAME), refugeeData[window.year])['countAsylum']) || 0;
             } catch (error) {
                 refugeeAmount = 0;
+                asylumAmount = 0;
             }
 
-            tooltip.text(d.properties.NAME + ": " + refugeeAmount);
+            tooltip.text(d.properties.NAME + ': ' + (refugeeAmount + asylumAmount));
         })
-        .on("mousemove", function () {
-            return tooltip.style("top", (event.pageY - 10) + "px")
-                .style("left", (event.pageX + 10) + "px");
+        .on('mousemove', function () {
+            return tooltip.style('top', (event.pageY - 10) + 'px')
+                .style('left', (event.pageX + 10) + 'px');
         })
-        .on("mouseout", function () { return tooltip.style("visibility", "hidden"); });
+        .on('mouseout', function () { return tooltip.style('visibility', 'hidden'); });
 }
 
 const drawMap = (countries, traffic) => {
