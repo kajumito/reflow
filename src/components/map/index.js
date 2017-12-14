@@ -34,12 +34,12 @@ function makeSearchBar() {
     for (let i in worldCountryList) {
         var listItem = document.createElement('li');
         listItem.style.display = 'none';
-        listItem.setAttribute('id', worldCountryList[i]);
+        listItem.setAttribute('id', `search-${worldCountryList[i]}`);
         listItem.setAttribute('class', 'search-bar-li');
         listItem.appendChild(document.createTextNode(worldCountryList[i]));
         searchBarList.appendChild(listItem);
 
-        document.getElementById(worldCountryList[i]).addEventListener('click', function () {
+        document.getElementById(`search-${worldCountryList[i]}`).addEventListener('click', function () {
 
             var a = document.getElementById('searchBarInput');
             var parent = a.parentNode;

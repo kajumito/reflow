@@ -103,6 +103,10 @@ aside.info-container {
 			list-style-type: none;
 		}
 
+		li#event-desc {
+			clear: both;
+		}
+
 		li#event-box{
 			margin-bottom: 20px;
 			border: 1px solid $font-light-color;
