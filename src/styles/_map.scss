@@ -25,16 +25,29 @@
         stroke: #577B8C;
     }
 
+
     .arc {
         stroke-width: 2;
-        fill: none;
-        animation: dash 10s linear infinite;
+        fill:none;
+        animation: dash 10s linear infinite, fadein 2s;
         pointer-events: none;
+    }
+
+    .pallo {
+        //animation: fadein 2s;
+        pointer-events: none;
+        fill: none;
+        //stroke-opacity: 0;
     }
 
     &.animate-stop .arc {
         animation: none;
         stroke-dasharray: 0;
+    }
+
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
   
     @keyframes dash {
@@ -45,7 +58,6 @@
           stroke-dashoffset: 0;
         }
     }
-    
 
     .route {
         fill: none;
