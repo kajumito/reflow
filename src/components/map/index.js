@@ -40,7 +40,6 @@ function makeSearchBar() {
         searchBarList.appendChild(listItem);
 
         document.getElementById(`search-${worldCountryList[i]}`).addEventListener('click', function () {
-
             var a = document.getElementById('searchBarInput');
             var parent = a.parentNode;
             parent.removeChild(a);
@@ -61,7 +60,9 @@ function makeSearchBar() {
 
     var ul = document.getElementById('searchBarList');
 
-    document.getElementById('search').addEventListener('click', function () {
+    //Sometimes this doesn't work. No clue why
+    document.getElementById('search').addEventListener('click', function (e) {
+        e.preventDefault();
 
         if (toggle == true) {
 
@@ -169,13 +170,13 @@ function makeTooltip() {
             tooltip.text(d.properties.NAME + ': ' + (refugeeAmount + asylumAmount));
         })
         .on('mouseout', function () { return tooltip.style('visibility', 'hidden'); });
-        
+
     document.querySelectorAll('path').forEach(el => {
         el.addEventListener('mousemove', (event) => {
             return tooltip.style('top', (event.pageY - 10) + 'px')
                 .style('left', (event.pageX + 10) + 'px');
         });
-    }); 
+    });
 }
 
 const drawMap = (countries, traffic) => {

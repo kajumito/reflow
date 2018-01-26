@@ -29,14 +29,14 @@
     .arc {
         stroke-width: 2;
         fill:none;
-        animation: dash 10s linear infinite, fadein 2s;
+        //animation: dash 10s linear infinite, fadein 2s;
         pointer-events: none;
     }
 
-    .pallo {
+    .marker {
         //animation: fadein 2s;
         pointer-events: none;
-        fill: none;
+        //fill: green;
         //stroke-opacity: 0;
     }
 

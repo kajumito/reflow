@@ -5,7 +5,6 @@ import slugify from 'slugify';
 import { svg } from '../map-settings';
 import { additionalCountryAdded } from '../events';
 import { transition } from 'd3-transition';
-import { easeCircle } from 'd3-ease';
 
 
 /**
@@ -73,7 +72,7 @@ export const processCoordinates = (traffic) => {
         window.map.allCoordinates = [];
         window.map.fromCountryList = [];
         selectAll('.arc').remove();
-        selectAll('.pallo').remove();
+        selectAll('.marker').remove();
 
     }
 
@@ -141,24 +140,26 @@ export const processCoordinates = (traffic) => {
             //        OLD ANIMATION            //
             ////////////////////////////////////
 
-            //Animation
-            // let line = svg.append('path')
-            //     .datum(coordinates)
-            //     .attr('d', drawArcs)
-            //     .attr('class', 'arc');
-
-            // var totalLength = line.node().getTotalLength();
-
-            // line
-            //     .attr('stroke-dasharray', setLineLength(totalRefugees, maxCount))
-            //     .attr('stroke', setLineColor(totalRefugees));
-
+            ////Animation
+            //let line = svg.append('path')
+            //    .datum(coordinates)
+            //    .attr('d', drawArcs)
+            //    .attr('class', 'arc');
+            //
+            //var totalLength = line.node().getTotalLength();
+            //
+            //line
+            //    .attr('stroke-dasharray', setLineLength(totalRefugees, maxCount))
+            //    .attr('stroke', setLineColor(totalRefugees));
+            //
             ///////////////////////////////////////////////////////////////
+
 
 
             //////////////////////////////////////
             //        NEW ANIMATION            //"MIGHT" LAG!!!!
             ////////////////////////////////////
+
 
             let path = svg.append('path')
                 .datum(coordinates)
@@ -166,26 +167,50 @@ export const processCoordinates = (traffic) => {
                 .attr('class', 'arc');
 
             let l = path.node().getTotalLength();
-            let k = l / 5; // <-- Number of cirles in a path. Higher looks better but lags more
+            let k = l / 5; //Number of circles in a path. Higher looks better but lags more
 
             //Some optimization. Shorter paths don't need so many circles
             if (l > 100) {
                 k = l / 10;
             }
 
+            if (l > 150) {
+                k = l / 15;
+            }
+
             if (l > 200) {
                 k = l / 20;
+            }
+
+            if (l > 250) {
+                k = l / 25;
             }
 
             if (l > 300) {
                 k = l / 30;
             }
 
-            var dur1 = 500;
-            var dur2 = dur1/2;
-            var delay = 500;
+
+
+            var dur1 = 700;
+            var point = path.node().getPointAtLength(0);
 
             let x = 50;
+
+            //Let's add points to every country where the refugees are coming from
+            let marker = svg.insert("circle")
+                .attr("r", 2)
+                .attr("transform", "translate(" + point.x + "," + point.y + ")")
+                .style("opacity", 0)
+                .attr('class', 'marker')
+                .attr('stroke', "crimson")
+                .transition()
+                .duration(dur1)
+                .style("opacity", 1)
+                .transition()
+                .delay(2000)
+                .duration(dur1*2)
+                .style("opacity", 0);
 
             for (let i = k; i < l; i = i + k) {
 
@@ -194,22 +219,20 @@ export const processCoordinates = (traffic) => {
                 let marker = svg.insert("circle")
                     .attr("r", 1)
                     .attr("transform", "translate(" + p.x + "," + p.y + ")")
-                    .style("stroke-opacity", 0)
-                    .attr('class', 'pallo')
-                    //.attr('stroke', "red")
+                    .style("opacity", 0)
+                    .attr('class', 'marker')
+                    .attr('fill', "none")
                     .attr('stroke', setLineColor(totalRefugees))
-                    //.attr('fill', "none")
+                    .transition()
+                    .delay(300)
+                    .duration(dur1 + x)
+                    .style("opacity", 1)
                     .transition()
                     .delay(500)
-                    .duration(dur1 + x)
-                    .ease(easeCircle)
-                    .style("stroke-opacity", 1)
-                    .transition()
-                    .duration(dur2)
-                    .ease(easeCircle)
-                    .style("stroke-opacity", 0)
+                    .duration(dur1)
+                    .style('opacity', 0);
 
-                x = x + 10;
+                x = x + 50;
             }
 
             ///////////////////////////////////////////////////
