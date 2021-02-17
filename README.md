@@ -38,7 +38,7 @@ Tool that visualizes refugee flow of a country on a world map.
 
 * **Kasper Tontti**
 * **Mikko Kokkoniemi**
-* **Henter Eloranta**
+* **Hentter Eloranta**
 * **Tapio Mylläri**
 
 ## License
