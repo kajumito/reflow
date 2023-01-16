@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/kajumito/reflow#readme",
   "dependencies": {
-    "axios": "^0.17.0",
+    "axios": "^0.21.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-polyfill": "^6.26.0",
